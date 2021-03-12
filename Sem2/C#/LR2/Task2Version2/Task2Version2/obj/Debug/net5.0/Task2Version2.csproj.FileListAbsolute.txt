@@ -1,0 +1,16 @@
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\Task2Version2.exe
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\Task2Version2.deps.json
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\Task2Version2.runtimeconfig.json
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\Task2Version2.runtimeconfig.dev.json
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\Task2Version2.dll
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\ref\Task2Version2.dll
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\bin\Debug\net5.0\Task2Version2.pdb
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.csprojAssemblyReference.cache
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.GeneratedMSBuildEditorConfig.editorconfig
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.AssemblyInfoInputs.cache
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.AssemblyInfo.cs
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.csproj.CoreCompileInputs.cache
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.dll
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\ref\Task2Version2.dll
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.pdb
+D:\LR\Sem2\C#\LR2\Task2Version2\Task2Version2\obj\Debug\net5.0\Task2Version2.genruntimeconfig.cache
