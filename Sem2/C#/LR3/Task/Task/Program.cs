@@ -35,7 +35,7 @@ namespace Task
 			Console.WriteLine(obj1 + "\n");
 			Console.WriteLine(obj2 + "\n");
 
-			Console.WriteLine("Do you want to change the values? (yes - more then 0)");
+			Console.WriteLine("Do you want to change the values? (yes - more then 1)");
 			int decision;
 			if (int.TryParse(Console.ReadLine(), out decision) && decision >= 1)
 			{
