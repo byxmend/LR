@@ -4,14 +4,14 @@ namespace Task
 {
     class Company
     {
-        public string Name { get; set; }
-        public int AvarageSalary { get; set; }
-        public string WebsiteDomain { get; set; }
-        private string ID { get; set; }
+        public string Name;
+        public int AvarageSalary;
+        public string WebsiteDomain;
+        private string ID;
 
         public Company()
         {
-            Name = "Priorbank";
+            Name = "PriorBank";
             AvarageSalary = 1000;
             WebsiteDomain = "by";
             ID = GenerationID();
@@ -28,5 +28,6 @@ namespace Task
         private static string GenerationID() => Guid.NewGuid().ToString();
 
         public override string ToString() => $"Name: {Name}\nAvarage salary: {AvarageSalary}\nWebsite domain: {WebsiteDomain}\nID: {ID}";
+        
     }
 }

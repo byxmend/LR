@@ -32,8 +32,10 @@ namespace Task
         {
             Company obj1 = new Company();
             Company obj2 = new Company("Wargaming", 2000, "com");
+            Company obj3 = new Company("WG", 2000, "com");
             Console.WriteLine(obj1 + "\n");
             Console.WriteLine(obj2 + "\n");
+            Console.WriteLine(obj3 + "\n");
 
             Console.WriteLine("Do you want to change the values? (yes - more then 1)");
             int decision;
