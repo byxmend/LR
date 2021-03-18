@@ -52,5 +52,3 @@ namespace Tank
         }
     }
 }
-
-// change Convert to TryParse

@@ -19,7 +19,7 @@ namespace Tank
             HitPoints = 2750;
             DamagePerMinute = 2465;
             Name = "E100";
-            Armor = "good"; // bad, average, good
+            Armor = "good";
             Id = GenerationId();
         }
 
