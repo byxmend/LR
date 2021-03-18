@@ -4,13 +4,13 @@ namespace Tank
 {
     public class Tank
     {
-        public int AverageSpeed;
-        public int Caliber;
-        public int HitPoints;
-        public int DamagePerMinute;
-        public string Name;
-        public string Armor;
-        //private string ID;
+        private int AverageSpeed { get; set; }
+        private int Caliber { get; }
+        private int HitPoints { get; set; }
+        private int DamagePerMinute { get; set; }
+        private string Name { get; }
+        private string Armor { get; }
+        private string Id { get; }
 
         public Tank()
         {
@@ -20,23 +20,21 @@ namespace Tank
             DamagePerMinute = 2465;
             Name = "E100";
             Armor = "good"; // bad, average, good
+            Id = GenerationId();
         }
-        
-        public Tank(int averageSpeed = 0, int caliber = 0, int hp = 0, int dpm = 0, string name = "", string armor = "")
-        {
-            AverageSpeed = averageSpeed;
-            Caliber = caliber;
-            HitPoints = hp;
-            DamagePerMinute = dpm;
-            Name = name;
-            Armor = armor;
-        }
-        
+
         public void AddEquipment()
         {
-            AverageSpeed += 5;
-            HitPoints += 165;
-            DamagePerMinute += 186;
+            if (AverageSpeed == 35)
+            {
+                Console.WriteLine("There is equipment on the tank");
+            }
+            else
+            {
+                AverageSpeed += 5;
+                HitPoints += 165;
+                DamagePerMinute += 186;
+            }
         }
 
         public void RemoveEquipment()
@@ -52,5 +50,13 @@ namespace Tank
                 DamagePerMinute -= 186;
             }
         }
+
+        public void Output()
+        {
+            Console.WriteLine($"\nAverageSpeed: {AverageSpeed}\nCaliber: {Caliber}\nHitPoints: {HitPoints}\n" +
+                              $"DamagePerMinute: {DamagePerMinute}\nName: {Name}\nArmor: {Armor}\nId: {Id}");
+        }
+
+        private static string GenerationId() => System.Guid.NewGuid().ToString();
     }
 }

@@ -4,27 +4,42 @@ namespace Tank
 {
     class Program
     {
+        private static void Meny()
+        {
+            Console.WriteLine("\n1 - add equipment\n2 - remove equipment\n3 - output all fields\n4 - turn off");
+        }
+        
         static void Main(string[] args)
         {
+            int a;
+            
             Tank x = new Tank();
-            Console.WriteLine($"averageSpeed: {x.AverageSpeed}");
-            x.AddEquipment();
-            Console.WriteLine(x.AverageSpeed);
-            x.RemoveEquipment();
-            Console.WriteLine(x.AverageSpeed);
+            x.Output();
+            
+            while (true)
+            {
+                Meny();
+                a = Convert.ToInt32(Console.ReadLine());
+                switch (a)
+                {
+                    case 1:
+                        x.AddEquipment();
+                        break;
+                    case 2:
+                        x.RemoveEquipment();
+                        break;
+                    case 3:
+                        x.Output();
+                        break;
+                    case 4:
+                        return;
+                    default:
+                        Console.WriteLine("You entered an invalid value, you can try again");
+                        break;
+                }
+            }
         }
     }
 }
 
-
-
-
-
-
-// add static
-// add outputs
-// add a menu for working with fields
-//add methods (1-2) (for example: )
-// add field crew and some methods with this field
-// maybe delete second constructor
-
+// change Convert to TryParse
