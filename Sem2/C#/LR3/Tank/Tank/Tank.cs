@@ -4,13 +4,14 @@ namespace Tank
 {
     public class Tank
     {
-        public int AverageSpeed { get; set; }
+        public int AverageSpeed { get; private set; }
         public int Caliber { get; }
-        public int HitPoints { get; set; }
-        public int DamagePerMinute { get; set; }
+        public int HitPoints { get; private set; }
+        public int DamagePerMinute { get; private set; }
         public string Name { get; }
         public string Armor { get; }
         public string Id { get; }
+        private bool Equipment { get; set; }
 
         public Tank(int averageSpeed, int caliber, int hitPoints, int damagePerMinute, string name, string armor)
         {
@@ -20,21 +21,38 @@ namespace Tank
             DamagePerMinute = damagePerMinute;
             Name = name;
             Armor = armor;
+            Equipment = false;
             Id = GenerationId();
         }
 
         public void AddEquipment()
         {
-            AverageSpeed += 5;
-            HitPoints += 165;
-            DamagePerMinute += 186;
+            if (!Equipment)
+            {
+                AverageSpeed += 10;
+                HitPoints += 300;
+                DamagePerMinute += 300;
+                Equipment = true;
+            }
+            else
+            {
+                Console.WriteLine("you can't install the equipment twice");
+            }
         }
 
         public void RemoveEquipment()
         {
-            AverageSpeed -= 5;
-            HitPoints -= 165;
-            DamagePerMinute -= 186;
+            if (Equipment)
+            {
+                AverageSpeed -= 10;
+                HitPoints -= 300;
+                DamagePerMinute -= 300;
+                Equipment = false;
+            }
+            else
+            {
+                Console.WriteLine("there is no equipment on the tank anyway");
+            }
         }
 
         private static string GenerationId() => System.Guid.NewGuid().ToString();

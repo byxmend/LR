@@ -35,7 +35,7 @@ namespace Tank
         
         private static void Meny()
         {
-            Console.WriteLine("\n1 - add equipment\n2 - remove equipment\n3 - output all tanks\n4 - turn off");
+            Console.WriteLine("\n1 - add equipment\n2 - remove equipment\n3 - output all tanks\n4 - turn off\n");
         }
         
         static int CheckInt()
@@ -50,42 +50,40 @@ namespace Tank
 
         static void ShowTanksSet(Tank[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            foreach (var t in array)
             {
-                Console.WriteLine($"\nAverageSpeed: {array[i].AverageSpeed}\nCaliber: {array[i].Caliber}\n" +
-                                  $"HitPoints: {array[i].HitPoints}\nDamagePerMinute: {array[i].DamagePerMinute}\n" +
-                                  $"Name: {array[i].Name}\nArmor: {array[i].Armor}\nId: {array[i].Id}");
+                Console.WriteLine($"\nAverageSpeed: {t.AverageSpeed}\nCaliber: {t.Caliber}\n" +
+                                  $"HitPoints: {t.HitPoints}\nDamagePerMinute: {t.DamagePerMinute}\n" +
+                                  $"Name: {t.Name}\nArmor: {t.Armor}\nId: {t.Id}");
             }
         }
 
         static int ChooseTanks(Tank[] array)
         {
-            int a;
             Console.WriteLine("Choose number of the tank: ");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write((i + 1) + " ");
+                Console.WriteLine(":");
             }
 
-            a = CheckInt();
+            int a = CheckInt();
             return (a - 1);
         }
 
         static void Main(string[] args)
         {
-            int a, n;
             Console.WriteLine("How many tanks?");
-            n = CheckInt();
+            int n = CheckInt();
 
             Tank[] tanksSet = new Tank[n];
             TanksFill(ref tanksSet);
             ShowTanksSet(tanksSet);
-            
+
             while (true)
             {
-                Console.Clear();
                 Meny();
-                a = CheckInt();
+                int a = CheckInt();
 
                 switch (a)
                 {
