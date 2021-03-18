@@ -20,6 +20,7 @@ namespace Tank
             {
                 Meny();
                 a = Convert.ToInt32(Console.ReadLine());
+                
                 switch (a)
                 {
                     case 1:
