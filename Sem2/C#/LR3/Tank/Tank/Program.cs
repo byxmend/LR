@@ -9,6 +9,16 @@ namespace Tank
             Console.WriteLine("\n1 - add equipment\n2 - remove equipment\n3 - output all fields\n4 - turn off");
         }
         
+        static int CheckFloat()
+        {
+            int a;
+            while (!int.TryParse(Console.ReadLine(), out a))
+            {
+                Console.Write("Invalid data, please try again: ");
+            }
+            return a;
+        }
+        
         static void Main(string[] args)
         {
             int a;
@@ -19,7 +29,7 @@ namespace Tank
             while (true)
             {
                 Meny();
-                a = Convert.ToInt32(Console.ReadLine());
+                a = CheckFloat();
                 
                 switch (a)
                 {
