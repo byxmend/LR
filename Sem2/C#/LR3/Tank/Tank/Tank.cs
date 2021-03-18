@@ -36,7 +36,7 @@ namespace Tank
             }
             else
             {
-                Console.WriteLine("you can't install the equipment twice");
+                Console.WriteLine("You can't install the equipment twice");
             }
         }
 
@@ -51,7 +51,7 @@ namespace Tank
             }
             else
             {
-                Console.WriteLine("there is no equipment on the tank anyway");
+                Console.WriteLine("There is no equipment on the tank anyway");
             }
         }
 

@@ -35,7 +35,7 @@ namespace Tank
         
         private static void Meny()
         {
-            Console.WriteLine("\n1 - add equipment\n2 - remove equipment\n3 - output all tanks\n4 - turn off\n");
+            Console.WriteLine("\n1 - Add equipment\n2 - Remove equipment\n3 - Output all tanks\n4 - Turn off\n");
         }
         
         static int CheckInt()
@@ -64,8 +64,8 @@ namespace Tank
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write((i + 1) + " ");
-                Console.WriteLine(":");
             }
+            Console.WriteLine(":");
 
             int a = CheckInt();
             return (a - 1);
