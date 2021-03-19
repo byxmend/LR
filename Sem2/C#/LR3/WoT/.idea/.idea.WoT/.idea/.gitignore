@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.WoT.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\LR\Sem2\C#\LR3\WoT\.idea\.idea.WoT\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

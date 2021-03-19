@@ -4,7 +4,7 @@ namespace Task
 {
     class Program
     {
-        static void TanksFill(ref Tank[] array)
+        static void FillTanksSet(ref Tank[] array)
         {
             int AverageSpeed;
             int Caliber;
@@ -33,7 +33,7 @@ namespace Task
             }
         }
 
-        private static void Meny()
+        private static void Menu()
         {
             Console.WriteLine("\n1 - Add equipment\n2 - Remove equipment\n3 - Output all tanks\n4 - Turn off\n");
         }
@@ -77,12 +77,12 @@ namespace Task
             int n = CheckInt();
 
             Tank[] tanksSet = new Tank[n];
-            TanksFill(ref tanksSet);
+            FillTanksSet(ref tanksSet);
             ShowTanksSet(tanksSet);
 
             while (true)
             {
-                Meny();
+                Menu();
                 int a = CheckInt();
 
                 switch (a)
