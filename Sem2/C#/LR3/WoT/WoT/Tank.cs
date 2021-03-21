@@ -24,7 +24,5 @@ namespace WoT
         }
         
         private static string GenerationId() => Guid.NewGuid().ToString();
-        
-        
     }
 }
