@@ -1,8 +1,9 @@
-﻿namespace WoT
+﻿using System;
+
+namespace WoT
 {
     public class Tank
     {
-<<<<<<< HEAD
         public int HitPoints { get; }
         public int AverageSpeed { get; }
         public int DamagePerMinute { get; }
@@ -23,8 +24,5 @@
         }
         
         private static string GenerationId() => Guid.NewGuid().ToString();
-=======
-        
->>>>>>> parent of de7fe02 (:anchor:)
     }
 }

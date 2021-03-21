@@ -38,14 +38,9 @@ namespace WoT
         
         static void Main(string[] args)
         {
-<<<<<<< HEAD
             Tanks tanks = new Tanks();
             FillTanksSet(tanks);
             ShowTanksSet(tanks);
-=======
-            Tanks x = new Tanks();
-            x.L();
->>>>>>> parent of de7fe02 (:anchor:)
         }
     }
 }
