@@ -7,8 +7,7 @@ namespace WoT
         static void Main(string[] args)
         {
             Tanks x = new Tanks();
-            x.FillTanksSet();
-            x.ShowTanksSet();
+            x.L();
         }
     }
 }

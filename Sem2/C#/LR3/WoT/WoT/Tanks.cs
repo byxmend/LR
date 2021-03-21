@@ -10,9 +10,9 @@ namespace WoT
         private string Name { get; }
         private string Id { get; }
         private bool Equipment { get; set; }
-        
-        public Tanks() {}
 
+        public Tanks() {}
+        
         private Tanks(int hitPoints, int averageSpeed, int damagePerMinute, string name)
         {
             HitPoints = hitPoints;
@@ -25,14 +25,14 @@ namespace WoT
         
         private static string GenerationId() => Guid.NewGuid().ToString();
         
-        private readonly Tanks[] _tanksSet = new Tanks[3];
+        private Tanks[] _tanksSet = new Tanks[3];
 
         public Tanks this[int index]
         {
             get => _tanksSet[index];
             set => _tanksSet[index] = value;
         }
-        
+
         private int CheckInt()
         {
             int a;
@@ -49,7 +49,7 @@ namespace WoT
             int averageSpeed;
             int damagePerMinute;
             string name;
-            
+
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine("Enter the hit points:");
@@ -64,6 +64,11 @@ namespace WoT
                 _tanksSet[i] = new Tanks(hitPoints, averageSpeed, damagePerMinute, name);
                 Console.Clear();
             }
+        }
+
+        public void L()
+        {
+            Console.WriteLine(_tanksSet.Length);
         }
 
         public void ShowTanksSet()
