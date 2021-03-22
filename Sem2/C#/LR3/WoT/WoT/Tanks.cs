@@ -33,6 +33,7 @@ namespace WoT
             int averageSpeed;
             int damagePerMinute;
             string name;
+            int ammunition;
 
             for (int i = 0; i < 3; i++)
             {
@@ -44,8 +45,10 @@ namespace WoT
                 damagePerMinute = CheckInt();
                 Console.WriteLine("Enter the name:");
                 name = Console.ReadLine();
+                Console.WriteLine("Enter the ammunition size:");
+                ammunition = CheckInt();
                 
-                this[i] = new Tank(hitPoints, averageSpeed, damagePerMinute, name);
+                this[i] = new Tank(hitPoints, averageSpeed, damagePerMinute, name, ammunition);
                 Console.Clear();
             }
         }

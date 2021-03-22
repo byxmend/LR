@@ -10,23 +10,28 @@ namespace WoT
         public string Name { get; }
         public string Id { get; }
         private bool Equipment { get; set; }
+        private int Ammunition { get; set; }
         
         public Tank() {}
         
-        public Tank(int hitPoints, int averageSpeed, int damagePerMinute, string name)
+        public Tank(int hitPoints, int averageSpeed, int damagePerMinute, string name, int ammunition)
         {
             HitPoints = hitPoints;
             AverageSpeed = averageSpeed;
             DamagePerMinute = damagePerMinute;
             Name = name;
             Equipment = false;
+            Ammunition = ammunition;
             Id = GenerationId();
         }
         
+        private static string GenerationId() => Guid.NewGuid().ToString();
+
+        private readonly Tanks _tanks = new Tanks();
+
         public int ChooseTank()
         {
-            Tanks tanks = new Tanks();
-            Console.WriteLine("Choose number of the tank:");
+            Console.WriteLine("\nChoose number of the tank:");
             
             for (int i = 1; i < 4; i++)
             {
@@ -34,11 +39,11 @@ namespace WoT
             }
             Console.WriteLine(": ");
             
-            int a = tanks.CheckInt();
+            int a = _tanks.CheckInt();
             return (a - 1);
         }
         
-        public void AddEquipment()
+        public void AddEquip()
         {
             if (!Equipment)
             {
@@ -53,7 +58,7 @@ namespace WoT
             }
         }
 
-        public void RemoveEquipment()
+        public void RemoveEquip()
         {
             if (Equipment)
             {
@@ -67,7 +72,23 @@ namespace WoT
                 Console.WriteLine("There is no equipment on the tank anyway");
             }
         }
-        
-        private static string GenerationId() => Guid.NewGuid().ToString();
+
+        public void Shoot(Tank tank)
+        {
+            if (tank.Ammunition > 0)
+            {
+                tank.Ammunition--;
+                Console.WriteLine("The tank fired!");
+            }
+            else
+            {
+                Console.WriteLine("No ammunition");
+            }
+        }
+
+        public void Battle()
+        {
+            
+        }
     }
 }
