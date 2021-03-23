@@ -31,9 +31,10 @@ namespace WoT
         {
             int hitPoints;
             int averageSpeed;
-            int damagePerMinute;
+            int shotsPerMinute;
             string name;
             int ammunition;
+            int damagePerShoot;
 
             for (int i = 0; i < 3; i++)
             {
@@ -41,14 +42,16 @@ namespace WoT
                 hitPoints = CheckInt();
                 Console.WriteLine("Enter the average speed:");
                 averageSpeed = CheckInt();
-                Console.WriteLine("Enter the damage per minute:");
-                damagePerMinute = CheckInt();
+                Console.WriteLine("Enter the number of shots fired per minute:");
+                shotsPerMinute = CheckInt();
                 Console.WriteLine("Enter the name:");
                 name = Console.ReadLine();
                 Console.WriteLine("Enter the ammunition size:");
                 ammunition = CheckInt();
+                Console.WriteLine("Enter the damage per shoot:");
+                damagePerShoot = CheckInt();
                 
-                this[i] = new Tank(hitPoints, averageSpeed, damagePerMinute, name, ammunition);
+                this[i] = new Tank(hitPoints, averageSpeed, shotsPerMinute, name, ammunition, damagePerShoot);
                 Console.Clear();
             }
         }
@@ -58,7 +61,7 @@ namespace WoT
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine($"\nHitPoints: {this[i].HitPoints}\nAverageSpeed: {this[i].AverageSpeed}\n" +
-                                  $"DamagePerMinute: {this[i].DamagePerMinute}\nName: {this[i].Name}\nId: {this[i].Id}");
+                                  $"DamagePerMinute: {this[i].ShotsPerMinute}\nName: {this[i].Name}\nId: {this[i].Id}");
             }
         }
     }
