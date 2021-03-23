@@ -13,12 +13,9 @@ namespace WoT
         private int Ammunition { get; set; }
         private int DamagePerShoot { get; }
 
-        public Tank()
-        {
-        }
+        public Tank() { }
 
-        public Tank(int hitPoints, int averageSpeed, int shotsPerMinute, string name, int ammunition,
-            int damagePerShoot)
+        public Tank(int hitPoints, int averageSpeed, int shotsPerMinute, string name, int ammunition, int damagePerShoot)
         {
             HitPoints = hitPoints;
             AverageSpeed = averageSpeed;
@@ -116,7 +113,9 @@ namespace WoT
 
             if (secondTankShots > 0 && tank2.ShotsPerMinute > 0)
             {
+                // ReSharper disable once PossibleLossOfFraction
                 shotRatio1 = firstTankShots / secondTankShots;
+                // ReSharper disable once PossibleLossOfFraction
                 shotRatio2 = tank1.ShotsPerMinute / tank2.ShotsPerMinute;
             }
             else
