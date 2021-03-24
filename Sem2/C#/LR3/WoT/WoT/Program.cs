@@ -33,11 +33,11 @@ namespace WoT
                         break;
                     case 5:
                         tanks.MenuEquipment(array);
-                        tanks[tank.ChooseTank()].AddEquip(array[0], array[1], array[2]); // Check
+                        tanks[tank.ChooseTank()].AddEquip(array[0], array[1], array[2]);
                         break;
                     case 6:
                         tanks.MenuEquipment(array);
-                        tanks[tank.ChooseTank()].RemoveEquip(array[0], array[1], array[2]); // Check
+                        tanks[tank.ChooseTank()].RemoveEquip(array[0], array[1], array[2]);
                         break;
                     case 7:
                         tank.Shoot(tanks[tank.ChooseTank()]);

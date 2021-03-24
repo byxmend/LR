@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 namespace WoT
 {
@@ -125,41 +126,49 @@ namespace WoT
             double shotRatio1 = 0;
             double shotRatio2 = 0;
 
-            while (firstTankHp > 0)
+            if (tank1 != tank2)
             {
-                firstTankHp -= tank1.DamagePerShoot;
-                firstTankShots++;
-            }
-            
-            while (secondTankHp > 0)
-            {
-                secondTankHp -= tank2.DamagePerShoot;
-                secondTankShots++;
-            }
+                while (firstTankHp > 0)
+                {
+                    firstTankHp -= tank1.DamagePerShoot;
+                    firstTankShots++;
+                }
 
-            if (secondTankShots > 0 && tank2.ShotsPerMinute > 0)
-            {
-                // ReSharper disable once PossibleLossOfFraction
-                shotRatio1 = firstTankShots / secondTankShots;
-                // ReSharper disable once PossibleLossOfFraction
-                shotRatio2 = tank1.ShotsPerMinute / tank2.ShotsPerMinute;
+                while (secondTankHp > 0)
+                {
+                    secondTankHp -= tank2.DamagePerShoot;
+                    secondTankShots++;
+                }
+
+                if (secondTankShots > 0 && tank2.ShotsPerMinute > 0)
+                {
+                    // ReSharper disable once PossibleLossOfFraction
+                    shotRatio1 = firstTankShots / secondTankShots;
+                    // ReSharper disable once PossibleLossOfFraction
+                    shotRatio2 = tank1.ShotsPerMinute / tank2.ShotsPerMinute;
+                }
+                else
+                {
+                    Console.WriteLine(
+                        "The hit points of the second tank is less than zero or the second tank does not fire");
+                }
+
+                if (shotRatio1 < shotRatio2)
+                {
+                    Console.WriteLine("The first tank won");
+                }
+                else if (shotRatio1 > shotRatio2)
+                {
+                    Console.WriteLine("The second tank won");
+                }
+                else
+                {
+                    Console.WriteLine("Draw");
+                }
             }
             else
             {
-                Console.WriteLine("The hit points of the second tank is less than zero or the second tank does not fire");
-            }
-
-            if (shotRatio1 < shotRatio2)
-            {
-                Console.WriteLine("The first tank won");
-            }
-            else if (shotRatio1 > shotRatio2)
-            {
-                Console.WriteLine("The second tank won");
-            }
-            else
-            {
-                Console.WriteLine("Draw");
+                Console.WriteLine("A tank can't fight itself");
             }
         }
     }
