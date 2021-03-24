@@ -35,7 +35,7 @@ namespace WoT
                         tanks.MenuEquipment(array);
                         tanks[tank.ChooseTank()].AddEquip(array[0], array[1], array[2]); // Check
                         break;
-                    case 6:`
+                    case 6:
                         tanks.MenuEquipment(array);
                         tanks[tank.ChooseTank()].RemoveEquip(array[0], array[1], array[2]); // Check
                         break;
