@@ -26,6 +26,23 @@ namespace WoT
             }
             return a;
         }
+
+        public void Menu()
+        {
+            Console.WriteLine("Select an action:\n1 - Fill tanks set\n2 - Show tanks set\n3 - Add standard equipment" +
+                              "4 - Remove standard equipment\n5 - Add specific equipment\n6 - Remove specific equipment\n" +
+                              "7 - Shoot\n8 - Battle\n9 - Clear console\n10 - Turn off");
+        }
+
+        public void MenuEquipment(int[] array)
+        {
+            Console.WriteLine("Enter hitPoints:");
+            array[0] = CheckInt();
+            Console.WriteLine("Enter hitPoints:");
+            array[1] = CheckInt();
+            Console.WriteLine("Enter hitPoints:");
+            array[2] = CheckInt();
+        }
         
         public void FillTanksSet()
         {

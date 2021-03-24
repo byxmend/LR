@@ -164,6 +164,3 @@ namespace WoT
         }
     }
 }
-
-// add random(damage, break through)
-// create menu
