@@ -5,20 +5,18 @@ namespace WoT
     public class Tank
     {
         public int HitPoints { get; private set; }
-        public int AverageSpeed { get; private set; }
         public int ShotsPerMinute { get; private set; }
         public string Name { get; }
         public string Id { get; }
         private bool Equipment { get; set; }
-        private int Ammunition { get; set; }
-        private int DamagePerShoot { get; }
+        public int Ammunition { get; private set; }
+        public int DamagePerShoot { get; private set; }
 
         public Tank() { }
 
-        public Tank(int hitPoints, int averageSpeed, int shotsPerMinute, string name, int ammunition, int damagePerShoot)
+        public Tank(int hitPoints, int shotsPerMinute, string name, int ammunition, int damagePerShoot)
         {
             HitPoints = hitPoints;
-            AverageSpeed = averageSpeed;
             ShotsPerMinute = shotsPerMinute;
             Name = name;
             Equipment = false;
@@ -50,9 +48,23 @@ namespace WoT
         {
             if (!Equipment)
             {
-                AverageSpeed += 10;
-                HitPoints += 300;
-                ShotsPerMinute += 300;
+                HitPoints += 500;
+                ShotsPerMinute += 2;
+                Equipment = true;
+            }
+            else
+            {
+                Console.WriteLine("You can't install the equipment twice");
+            }
+        }
+
+        public void AddEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
+        {
+            if (!Equipment)
+            {
+                HitPoints += hitPoints;
+                ShotsPerMinute += shotsPerMinute;
+                DamagePerShoot += damagePerShot;
                 Equipment = true;
             }
             else
@@ -65,14 +77,28 @@ namespace WoT
         {
             if (Equipment)
             {
-                AverageSpeed -= 10;
-                HitPoints -= 300;
-                ShotsPerMinute -= 300;
+                HitPoints -= 500;
+                ShotsPerMinute -= 2;
                 Equipment = false;
             }
             else
             {
                 Console.WriteLine("There is no equipment on the tank anyway");
+            }
+        }
+        
+        public void RemoveEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
+        {
+            if (!Equipment)
+            {
+                HitPoints -= hitPoints;
+                ShotsPerMinute -= shotsPerMinute;
+                DamagePerShoot -= damagePerShot;
+                Equipment = false;
+            }
+            else
+            {
+                Console.WriteLine("You can't install the equipment twice");
             }
         }
 
@@ -139,7 +165,5 @@ namespace WoT
     }
 }
 
-// change output
 // add random(damage, break through)
 // create menu
-// checkDouble/int

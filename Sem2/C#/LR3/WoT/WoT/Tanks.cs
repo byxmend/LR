@@ -30,7 +30,6 @@ namespace WoT
         public void FillTanksSet()
         {
             int hitPoints;
-            int averageSpeed;
             int shotsPerMinute;
             string name;
             int ammunition;
@@ -40,8 +39,6 @@ namespace WoT
             {
                 Console.WriteLine("Enter the hit points:");
                 hitPoints = CheckInt();
-                Console.WriteLine("Enter the average speed:");
-                averageSpeed = CheckInt();
                 Console.WriteLine("Enter the number of shots fired per minute:");
                 shotsPerMinute = CheckInt();
                 Console.WriteLine("Enter the name:");
@@ -51,7 +48,7 @@ namespace WoT
                 Console.WriteLine("Enter the damage per shoot:");
                 damagePerShoot = CheckInt();
                 
-                this[i] = new Tank(hitPoints, averageSpeed, shotsPerMinute, name, ammunition, damagePerShoot);
+                this[i] = new Tank(hitPoints, shotsPerMinute, name, ammunition, damagePerShoot);
                 Console.Clear();
             }
         }
@@ -60,8 +57,9 @@ namespace WoT
         {
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine($"\nHitPoints: {this[i].HitPoints}\nAverageSpeed: {this[i].AverageSpeed}\n" +
-                                  $"DamagePerMinute: {this[i].ShotsPerMinute}\nName: {this[i].Name}\nId: {this[i].Id}");
+                Console.WriteLine($"\nHitPoints: {this[i].HitPoints}\nShotsPerMinute: {this[i].ShotsPerMinute}\n" +
+                                  $"Name: {this[i].Name}\nId: {this[i].Id}\nAmmunition: {this[i].Ammunition}\n" +
+                                  $"DamagePerShoot: {this[i].DamagePerShoot}");
             }
         }
     }
