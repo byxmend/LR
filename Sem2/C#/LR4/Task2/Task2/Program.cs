@@ -48,5 +48,3 @@ namespace Task2
         }
     }
 }
-
-// Change library
