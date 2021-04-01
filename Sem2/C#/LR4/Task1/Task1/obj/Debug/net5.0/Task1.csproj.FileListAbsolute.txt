@@ -1,0 +1,16 @@
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\Task1.exe
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\Task1.deps.json
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\Task1.runtimeconfig.json
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\Task1.runtimeconfig.dev.json
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\Task1.dll
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\ref\Task1.dll
+D:\LR\Sem2\C#\LR4\Task1\Task1\bin\Debug\net5.0\Task1.pdb
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.csprojAssemblyReference.cache
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.GeneratedMSBuildEditorConfig.editorconfig
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.AssemblyInfoInputs.cache
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.AssemblyInfo.cs
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.csproj.CoreCompileInputs.cache
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.dll
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\ref\Task1.dll
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.pdb
+D:\LR\Sem2\C#\LR4\Task1\Task1\obj\Debug\net5.0\Task1.genruntimeconfig.cache
