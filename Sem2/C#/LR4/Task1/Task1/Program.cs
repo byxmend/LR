@@ -39,18 +39,18 @@ namespace Task1
 [StructLayout(LayoutKind.Sequential)]
 public class MemoryStatus
 {
-	public readonly int Length;
-	public int PercentMemoryLoad;
-	public long TotalPhys;
-	public long AvailPhys;
-	public long TotalPageFile;
-	public long AvailPageFile;
-	public long TotalVirtual;
-	public long AvailVirtual;
-	public long AvailExtendedVirtual;
+    public readonly int Length;
+    public int PercentMemoryLoad;
+    public long TotalPhys;
+    public long AvailPhys;
+    public long TotalPageFile;
+    public long AvailPageFile;
+    public long TotalVirtual;
+    public long AvailVirtual;
+    public long AvailExtendedVirtual;
 
-	public MemoryStatus()
-	{
-		Length = Marshal.SizeOf(typeof(MemoryStatus));
-	}
+    public MemoryStatus()
+    {
+        Length = Marshal.SizeOf(typeof(MemoryStatus));
+    }
 }
