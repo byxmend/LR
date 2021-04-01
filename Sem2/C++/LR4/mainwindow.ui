@@ -39,7 +39,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditA"/>
+        <widget class="QLineEdit" name="lineEditA">
+         <property name="text">
+          <string>5.6</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -58,7 +62,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditB"/>
+        <widget class="QLineEdit" name="lineEditB">
+         <property name="text">
+          <string>7.4</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -77,7 +85,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditC"/>
+        <widget class="QLineEdit" name="lineEditC">
+         <property name="text">
+          <string>8.9</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -96,7 +108,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditD"/>
+        <widget class="QLineEdit" name="lineEditD">
+         <property name="text">
+          <string>3.1</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -115,7 +131,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditE"/>
+        <widget class="QLineEdit" name="lineEditE">
+         <property name="text">
+          <string>0.2</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -171,7 +191,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditExpression"/>
+      <widget class="QLineEdit" name="lineEditExpression">
+       <property name="text">
+        <string>(a+(b/c-d))*e</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -200,7 +224,7 @@
      <x>0</x>
      <y>0</y>
      <width>467</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

@@ -196,7 +196,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 467, 20));
+        menubar->setGeometry(QRect(0, 0, 467, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -211,12 +211,18 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "a = ", nullptr));
+        lineEditA->setText(QCoreApplication::translate("MainWindow", "5.6", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "b = ", nullptr));
+        lineEditB->setText(QCoreApplication::translate("MainWindow", "7.4", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "c = ", nullptr));
+        lineEditC->setText(QCoreApplication::translate("MainWindow", "8.9", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "d = ", nullptr));
+        lineEditD->setText(QCoreApplication::translate("MainWindow", "3.1", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "e = ", nullptr));
+        lineEditE->setText(QCoreApplication::translate("MainWindow", "0.2", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Answer", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Expression", nullptr));
+        lineEditExpression->setText(QCoreApplication::translate("MainWindow", "(a+(b/c-d))*e", nullptr));
         pushButtonCalculate->setText(QCoreApplication::translate("MainWindow", "\320\241alculate", nullptr));
     } // retranslateUi
 

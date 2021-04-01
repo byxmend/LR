@@ -20,7 +20,17 @@ public:
 private slots:
     void on_pushButtonCalculate_clicked();
 
-    void on_lineEditExpression_textChanged(const QString &arg1);
+    void on_lineEditExpression_textChanged();
+
+    void on_lineEditA_textChanged();
+
+    void on_lineEditB_textChanged();
+
+    void on_lineEditC_textChanged();
+
+    void on_lineEditD_textChanged();
+
+    void on_lineEditE_textChanged();
 
 private:
     Ui::MainWindow *ui;

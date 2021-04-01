@@ -36,14 +36,16 @@ int operatorPriority(QChar c)
 
 bool MainWindow::proceedOperation()
 {
-    double b = values.top();
-    values.pop();
+    double b = values.top(); // Возвращает ссылку на верхний элемент стека
+    values.pop(); // Удаляет верхний элемент из стека и возвращает его
     double a = values.top();
     values.pop();
+
     QChar oper = operators.top();
     operators.pop();
 
     double result;
+
     switch(oper.unicode())
     {
     case '+':
@@ -59,7 +61,7 @@ bool MainWindow::proceedOperation()
     {
         if(b == 0)
         {
-            QMessageBox::warning(this, "Недопустимая операция", "Деление на ноль невозможно");
+            QMessageBox::warning(this, "Invalid operation", "Division by zero is not possible");
             return false;
         }
         result = a / b;
@@ -68,7 +70,8 @@ bool MainWindow::proceedOperation()
     default:
         result = 0;
     }
-    values.push(result);
+
+    values.push(result); // Добавляет элемент result в начало стека.
 
     return true;
 }
@@ -90,8 +93,7 @@ void MainWindow::on_pushButtonCalculate_clicked()
 
         if (isOperator(expression[i]))
         {
-            while (!operators.empty() &&
-                   operatorPriority(expression[i]) < operatorPriority(operators.top()))
+            while (!operators.empty() && operatorPriority(expression[i]) < operatorPriority(operators.top()))
             {
                 if (!proceedOperation())
                     return;
@@ -123,9 +125,49 @@ void MainWindow::on_pushButtonCalculate_clicked()
     values.pop();
 }
 
-void MainWindow::on_lineEditExpression_textChanged(const QString &arg1)
+void MainWindow::on_lineEditExpression_textChanged()
 {
     if (ui->lineEditExpression->text() != "")
+        ui->pushButtonCalculate->setEnabled(true);
+    else
+        ui->pushButtonCalculate->setEnabled(false);
+}
+
+void MainWindow::on_lineEditA_textChanged()
+{
+    if (ui->lineEditA->text() != "")
+        ui->pushButtonCalculate->setEnabled(true);
+    else
+        ui->pushButtonCalculate->setEnabled(false);
+}
+
+void MainWindow::on_lineEditB_textChanged()
+{
+    if (ui->lineEditB->text() != "")
+        ui->pushButtonCalculate->setEnabled(true);
+    else
+        ui->pushButtonCalculate->setEnabled(false);
+}
+
+void MainWindow::on_lineEditC_textChanged()
+{
+    if (ui->lineEditC->text() != "")
+        ui->pushButtonCalculate->setEnabled(true);
+    else
+        ui->pushButtonCalculate->setEnabled(false);
+}
+
+void MainWindow::on_lineEditD_textChanged()
+{
+    if (ui->lineEditD->text() != "")
+        ui->pushButtonCalculate->setEnabled(true);
+    else
+        ui->pushButtonCalculate->setEnabled(false);
+}
+
+void MainWindow::on_lineEditE_textChanged()
+{
+    if (ui->lineEditE->text() != "")
         ui->pushButtonCalculate->setEnabled(true);
     else
         ui->pushButtonCalculate->setEnabled(false);
