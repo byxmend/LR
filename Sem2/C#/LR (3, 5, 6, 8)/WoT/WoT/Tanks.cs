@@ -2,7 +2,7 @@
 
 namespace WoT
 {
-    public class Tanks
+    public class Tanks : InputOutput
     {
         private readonly Tank[] _tanksSet;
 
@@ -44,7 +44,7 @@ namespace WoT
             array[2] = CheckInt();
         }
         
-        public void FillTanksSet()
+        public override void FillTanksSet(int i)
         {
             int hitPoints;
             int shotsPerMinute;
@@ -54,43 +54,40 @@ namespace WoT
             int nationInt;
             Nationality nation;
 
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine("Enter the hit points:");
-                hitPoints = CheckInt();
-                Console.WriteLine("Enter the number of shots fired per minute:");
-                shotsPerMinute = CheckInt();
-                Console.WriteLine("Enter the name:");
-                name = Console.ReadLine();
-                Console.WriteLine("Enter the ammunition size:");
-                ammunition = CheckInt();
-                Console.WriteLine("Enter the damage per shoot:");
-                damagePerShoot = CheckInt();
-                Console.WriteLine("Chose nation:\n1 - Germany\n2 - Russia\n3 - France\nOther - Multinational");
-                nationInt = CheckInt();
+            Console.WriteLine("Enter the hit points:");
+            hitPoints = CheckInt();
+            Console.WriteLine("Enter the number of shots fired per minute:");
+            shotsPerMinute = CheckInt();
+            Console.WriteLine("Enter the name:");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter the ammunition size:");
+            ammunition = CheckInt();
+            Console.WriteLine("Enter the damage per shoot:");
+            damagePerShoot = CheckInt();
+            Console.WriteLine("Chose nation:\n1 - Germany\n2 - Russia\n3 - France\nOther - Multinational");
+            nationInt = CheckInt();
 
-                switch (nationInt)
-                {
-                    case 1:
-                        nation = Nationality.Germany;
-                        break;
-                    case 2:
-                        nation = Nationality.Russia;
-                        break;
-                    case 3:
-                        nation = Nationality.France;
-                        break;
-                    default:
-                        nation = Nationality.Multinational;
-                        break;
-                }
-                
-                this[i] = new Tank(hitPoints, shotsPerMinute, name, ammunition, damagePerShoot, nation);
-                Console.Clear();
+            switch (nationInt)
+            {
+                case 1:
+                    nation = Nationality.Germany;
+                    break;
+                case 2:
+                    nation = Nationality.Russia;
+                    break;
+                case 3:
+                    nation = Nationality.France;
+                    break;
+                default:
+                    nation = Nationality.Multinational;
+                    break;
             }
+                
+            this[i] = new Tank(hitPoints, shotsPerMinute, name, ammunition, damagePerShoot, nation);
+            Console.Clear();
         }
 
-        public void ShowTanksSet()
+        public override void ShowTanksSet()
         {
             for (int i = 0; i < 3; i++)
             {

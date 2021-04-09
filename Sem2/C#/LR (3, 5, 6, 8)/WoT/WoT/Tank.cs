@@ -2,7 +2,7 @@
 
 namespace WoT
 {
-    public class Tank
+    public class Tank : Tanks
     {
         public int HitPoints { get; protected set; }
         public int ShotsPerMinute { get; protected set; }
@@ -14,6 +14,8 @@ namespace WoT
         public Nationality Nation { get; }
 
         public Tank() { }
+
+        private HeavyTank _heavyTank = new HeavyTank();
 
         public Tank(int hitPoints, int shotsPerMinute, string name, int ammunition, int damagePerShoot, Nationality nation)
         {
@@ -29,23 +31,6 @@ namespace WoT
 
         private static string GenerationId() => Guid.NewGuid().ToString();
 
-        private readonly Tanks _tanks = new Tanks();
-
-        public int ChooseTank()
-        {
-            Console.WriteLine("\nChoose number of the tank:");
-
-            for (int i = 1; i < 4; i++)
-            {
-                Console.Write(i + " ");
-            }
-
-            Console.WriteLine(": ");
-
-            int a = _tanks.CheckInt();
-            return (a - 1);
-        }
-
         public virtual void AddEquip()
         {
             if (!Equipment)
@@ -57,6 +42,20 @@ namespace WoT
             else
             {
                 Console.WriteLine("You can't install the equipment twice");
+            }
+        }
+        
+        public virtual void RemoveEquip()
+        {
+            if (Equipment)
+            {
+                HitPoints -= 500;
+                ShotsPerMinute -= 2;
+                Equipment = false;
+            }
+            else
+            {
+                Console.WriteLine("There is no equipment on the tank anyway");
             }
         }
 
@@ -75,20 +74,6 @@ namespace WoT
             }
         }
 
-        public virtual void RemoveEquip()
-        {
-            if (Equipment)
-            {
-                HitPoints -= 500;
-                ShotsPerMinute -= 2;
-                Equipment = false;
-            }
-            else
-            {
-                Console.WriteLine("There is no equipment on the tank anyway");
-            }
-        }
-        
         public void RemoveEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
         {
             if (!Equipment)
@@ -104,22 +89,10 @@ namespace WoT
             }
         }
 
-        public void Shoot(Tank tank)
-        {
-            if (tank.Ammunition > 0)
-            {
-                tank.Ammunition--;
-                Console.WriteLine("The tank fired!");
-            }
-            else
-            {
-                Console.WriteLine("No ammunition");
-            }
-        }
-
         public void Battle(Tank tank1, Tank tank2)
         {
             Console.WriteLine("\nBattle!\n");
+            
             int firstTankShots = 0;
             int secondTankShots = 0;
             int firstTankHp = tank1.HitPoints;
@@ -129,16 +102,20 @@ namespace WoT
 
             if (tank1 != tank2)
             {
+                // counting the number of shots to kill the first tank
                 while (firstTankHp > 0)
                 {
                     firstTankHp -= tank1.DamagePerShoot;
                     firstTankShots++;
+                    firstTankShots += _heavyTank.Defence(); // only for heavy tank
                 }
 
+                // counting the number of shots to kill the second tank
                 while (secondTankHp > 0)
                 {
                     secondTankHp -= tank2.DamagePerShoot;
                     secondTankShots++;
+                    secondTankShots += _heavyTank.Defence(); // only for heavy tank
                 }
 
                 if (secondTankShots > 0 && tank2.ShotsPerMinute > 0)
@@ -150,8 +127,7 @@ namespace WoT
                 }
                 else
                 {
-                    Console.WriteLine(
-                        "The hit points of the second tank is less than zero or the second tank does not fire");
+                    Console.WriteLine("The hit points of the second tank is less than zero or the second tank does not fire");
                 }
 
                 if (shotRatio1 < shotRatio2)

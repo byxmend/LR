@@ -8,6 +8,7 @@ namespace WoT
         {
             Tanks tanks = new Tanks();
             Tank tank = new Tank();
+
             tanks.FillTanksSet();
             tanks.ShowTanksSet();
             
@@ -26,24 +27,24 @@ namespace WoT
                         tanks.ShowTanksSet();
                         break;
                     case 3:
-                        tanks[tank.ChooseTank()].AddEquip();
+                        tanks[tanks.ChooseTank()].AddEquip();
                         break;
                     case 4:
-                        tanks[tank.ChooseTank()].RemoveEquip();
+                        tanks[tanks.ChooseTank()].RemoveEquip();
                         break;
                     case 5:
                         tanks.MenuEquipment(array);
-                        tanks[tank.ChooseTank()].AddEquip(array[0], array[1], array[2]);
+                        tanks[tanks.ChooseTank()].AddEquip(array[0], array[1], array[2]);
                         break;
                     case 6:
                         tanks.MenuEquipment(array);
-                        tanks[tank.ChooseTank()].RemoveEquip(array[0], array[1], array[2]);
+                        tanks[tanks.ChooseTank()].RemoveEquip(array[0], array[1], array[2]);
                         break;
                     case 7:
-                        tank.Shoot(tanks[tank.ChooseTank()]);
+                        // tank.Shoot(tanks[tanks.ChooseTank()]); // delete this method
                         break;
                     case 8:
-                        tank.Battle(tanks[tank.ChooseTank()], tanks[tank.ChooseTank()]);
+                        tank.Battle(tanks[tanks.ChooseTank()], tanks[tanks.ChooseTank()]);
                         break;
                     case 9:
                         Console.Clear();
