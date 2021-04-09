@@ -11,7 +11,7 @@ namespace WoT
             Console.WriteLine("Heavy tank:\n");
             Console.WriteLine("Enter armor ratio (more is worse):");
             ArmorRatio = CheckInt();
-            base.FillTanksSet(i); // 0 - indexer number
+            base.FillTanksSet(i);
         }
 
         public override void ShowTanksSet()

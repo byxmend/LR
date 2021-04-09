@@ -2,22 +2,22 @@
 
 namespace WoT
 {
-    public readonly struct Camo
+    public struct Camo
     {
         private readonly string _color;
         private readonly string _season;
-        private readonly int _disguise;
+        internal int Disguise;
 
         public Camo(string color, string season, int disguise)
         {
             _color = color;
             _season = season;
-            _disguise = disguise;
+            Disguise = disguise;
         }
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"Color: {_color}, Season: {_season}, Disguise: {_disguise}");
+            Console.WriteLine($"Color: {_color}\nSeason: {_season}\nDisguise: {Disguise}");
         }
     }
 }

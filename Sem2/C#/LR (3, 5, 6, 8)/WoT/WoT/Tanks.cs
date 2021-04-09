@@ -49,19 +49,16 @@ namespace WoT
             int hitPoints;
             int shotsPerMinute;
             string name;
-            int ammunition;
             int damagePerShoot;
             int nationInt;
             Nationality nation;
 
-            Console.WriteLine("Enter the hit points:");
+            Console.WriteLine("\nEnter the hit points:");
             hitPoints = CheckInt();
             Console.WriteLine("Enter the number of shots fired per minute:");
             shotsPerMinute = CheckInt();
             Console.WriteLine("Enter the name:");
             name = Console.ReadLine();
-            Console.WriteLine("Enter the ammunition size:");
-            ammunition = CheckInt();
             Console.WriteLine("Enter the damage per shoot:");
             damagePerShoot = CheckInt();
             Console.WriteLine("Chose nation:\n1 - Germany\n2 - Russia\n3 - France\nOther - Multinational");
@@ -83,7 +80,7 @@ namespace WoT
                     break;
             }
                 
-            this[i] = new Tank(hitPoints, shotsPerMinute, name, ammunition, damagePerShoot, nation);
+            this[i] = new Tank(hitPoints, shotsPerMinute, name, damagePerShoot, nation);
             Console.Clear();
         }
 
@@ -92,8 +89,8 @@ namespace WoT
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine($"\nHitPoints: {this[i].HitPoints}\nShotsPerMinute: {this[i].ShotsPerMinute}\n" +
-                                  $"Name: {this[i].Name}\nId: {this[i].Id}\nAmmunition: {this[i].Ammunition}\n" +
-                                  $"DamagePerShoot: {this[i].DamagePerShoot}\nNation: {this[i].Nation}");
+                                  $"Name: {this[i].Name}\nId: {this[i].Id}\nDamagePerShoot: " +
+                                  $"{this[i].DamagePerShoot}\nNation: {this[i].Nation}\n");
             }
         }
     }

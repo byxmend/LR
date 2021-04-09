@@ -13,8 +13,8 @@ namespace WoT
             tanks.ShowTanksSet();
             
             int[] array = new int[3];
-            int FirstChooseTank;
-            int SecondChooseTank;
+            int firstChooseTank;
+            int secondChooseTank;
 
             while (true)
             {
@@ -46,9 +46,9 @@ namespace WoT
                         // tank.Shoot(tanks[tanks.ChooseTank()]); // delete this method
                         break;
                     case 8:
-                        FirstChooseTank = tanks.ChooseTank();
-                        SecondChooseTank = tanks.ChooseTank();
-                        tank.Battle(tanks[FirstChooseTank], tanks[SecondChooseTank], FirstChooseTank, SecondChooseTank);
+                        firstChooseTank = tanks.ChooseTank();
+                        secondChooseTank = tanks.ChooseTank();
+                        tank.Battle(tanks[firstChooseTank], tanks[secondChooseTank], firstChooseTank, secondChooseTank);
                         break;
                     case 9:
                         Console.Clear();

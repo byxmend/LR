@@ -14,7 +14,7 @@ namespace WoT
             DamageAirSupport = CheckInt();
             Console.WriteLine("Enter the number of air supports per minute:");
             AirSupportPerMinute = CheckInt();
-            base.FillTanksSet(1); // 1 - indexer number
+            base.FillTanksSet(i);
         }
 
         public override void ShowTanksSet()

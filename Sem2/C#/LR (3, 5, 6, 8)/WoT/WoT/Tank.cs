@@ -4,27 +4,26 @@ namespace WoT
 {
     public class Tank : Tanks
     {
-        public int HitPoints { get; protected set; }
-        public int ShotsPerMinute { get; protected set; }
+        public int HitPoints { get; protected internal set; }
+        public int ShotsPerMinute { get; protected internal set; }
+        public int DamagePerShoot { get; protected internal set; }
         public string Name { get; }
         public string Id { get; }
         protected bool Equipment { get; set; }
-        public int Ammunition { get; private set; }
-        public int DamagePerShoot { get; protected set; }
         public Nationality Nation { get; }
 
         public Tank() { }
 
         private readonly HeavyTank _heavyTank = new HeavyTank();
         private readonly LightTank _lightTank = new LightTank();
+        private readonly Imba _imba = new Imba();
 
-        public Tank(int hitPoints, int shotsPerMinute, string name, int ammunition, int damagePerShoot, Nationality nation)
+        public Tank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, Nationality nation)
         {
             HitPoints = hitPoints;
             ShotsPerMinute = shotsPerMinute;
             Name = name;
             Equipment = false;
-            Ammunition = ammunition;
             DamagePerShoot = damagePerShoot;
             Id = GenerationId();
             Nation = nation;
@@ -59,38 +58,6 @@ namespace WoT
                 Console.WriteLine("There is no equipment on the tank anyway");
             }
         }
-        
-        // TODO
-        public void AddEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
-        {
-            if (!Equipment)
-            {
-                HitPoints += hitPoints;
-                ShotsPerMinute += shotsPerMinute;
-                DamagePerShoot += damagePerShot;
-                Equipment = true;
-            }
-            else
-            {
-                Console.WriteLine("You can't install the equipment twice");
-            }
-        }
-        
-        // TODO
-        public void RemoveEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
-        {
-            if (!Equipment)
-            {
-                HitPoints -= hitPoints;
-                ShotsPerMinute -= shotsPerMinute;
-                DamagePerShoot -= damagePerShot;
-                Equipment = false;
-            }
-            else
-            {
-                Console.WriteLine("You can't install the equipment twice");
-            }
-        }
 
         public void Battle(Tank tank1, Tank tank2, int firstChooseTank, int secondChooseTank)
         {
@@ -112,6 +79,15 @@ namespace WoT
                 else if (firstTankHp > 0 && secondChooseTank == 2)
                 {
                     firstTankHp -= (int)_lightTank.AirSupport(); // only for light tank (add air support)
+                }
+                
+                if (secondChooseTank == 3)
+                {
+                    firstTankShots += _imba.Aiming();
+                }
+                else if (firstChooseTank == 3)
+                {
+                    secondTankShots += _imba.Aiming();
                 }
                 
                 // counting the number of shots to kill the first tank
