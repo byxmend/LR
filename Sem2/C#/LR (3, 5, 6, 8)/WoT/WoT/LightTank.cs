@@ -5,7 +5,7 @@ namespace WoT
     public class LightTank : Tank
     {
         private int DamageAirSupport { get; set; }
-        private int AirSupportPerMinute { get; set; }
+        private double AirSupportPerMinute { get; set; }
 
         public override void FillTanksSet(int i)
         {
@@ -23,8 +23,13 @@ namespace WoT
             Console.WriteLine($"Damage from air support: {DamageAirSupport}");
             Console.WriteLine($"The number of air supports per minute: {AirSupportPerMinute}");
         }
-        
-        
+
+        public double AirSupport()
+        {
+            double value = DamageAirSupport * AirSupportPerMinute;
+
+            return value;
+        }
         
         public override void AddEquip()
         {

@@ -15,7 +15,8 @@ namespace WoT
 
         public Tank() { }
 
-        private HeavyTank _heavyTank = new HeavyTank();
+        private readonly HeavyTank _heavyTank = new HeavyTank();
+        private readonly LightTank _lightTank = new LightTank();
 
         public Tank(int hitPoints, int shotsPerMinute, string name, int ammunition, int damagePerShoot, Nationality nation)
         {
@@ -58,7 +59,8 @@ namespace WoT
                 Console.WriteLine("There is no equipment on the tank anyway");
             }
         }
-
+        
+        // TODO
         public void AddEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
         {
             if (!Equipment)
@@ -73,7 +75,8 @@ namespace WoT
                 Console.WriteLine("You can't install the equipment twice");
             }
         }
-
+        
+        // TODO
         public void RemoveEquip(int hitPoints, int shotsPerMinute, int damagePerShot)
         {
             if (!Equipment)
@@ -89,7 +92,7 @@ namespace WoT
             }
         }
 
-        public void Battle(Tank tank1, Tank tank2)
+        public void Battle(Tank tank1, Tank tank2, int firstChooseTank, int secondChooseTank)
         {
             Console.WriteLine("\nBattle!\n");
             
@@ -102,12 +105,25 @@ namespace WoT
 
             if (tank1 != tank2)
             {
+                if (secondTankHp > 0 && firstChooseTank == 2)
+                {
+                    secondTankHp -= (int)_lightTank.AirSupport(); // only for light tank (add air support)
+                }
+                else if (firstTankHp > 0 && secondChooseTank == 2)
+                {
+                    firstTankHp -= (int)_lightTank.AirSupport(); // only for light tank (add air support)
+                }
+                
                 // counting the number of shots to kill the first tank
                 while (firstTankHp > 0)
                 {
                     firstTankHp -= tank1.DamagePerShoot;
                     firstTankShots++;
-                    firstTankShots += _heavyTank.Defence(); // only for heavy tank
+                    
+                    if (secondChooseTank == 1)
+                    {
+                        firstTankShots += _heavyTank.Defence(); // only for heavy tank (add defence)
+                    }
                 }
 
                 // counting the number of shots to kill the second tank
@@ -115,7 +131,11 @@ namespace WoT
                 {
                     secondTankHp -= tank2.DamagePerShoot;
                     secondTankShots++;
-                    secondTankShots += _heavyTank.Defence(); // only for heavy tank
+
+                    if (secondChooseTank == 1)
+                    {
+                        secondTankShots += _heavyTank.Defence(); // only for heavy tank (add defence)
+                    }
                 }
 
                 if (secondTankShots > 0 && tank2.ShotsPerMinute > 0)
