@@ -25,12 +25,12 @@ namespace WoT
             base.FillTanksSet(i);
         }
 
-        public override void ShowTanksSet()
+        public override void ShowTanksSet(int i)
         {
-            base.ShowTanksSet();
+            base.ShowTanksSet(i);
             _camo.DisplayInfo();
         }
-        
+
         public int Aiming()
         {
             int value;

@@ -9,7 +9,7 @@ namespace WoT
         public int DamagePerShoot { get; protected internal set; }
         public string Name { get; }
         public string Id { get; }
-        protected bool Equipment { get; set; }
+        protected internal bool Equipment { get; set; }
         public Nationality Nation { get; }
 
         public Tank() { }
@@ -45,7 +45,7 @@ namespace WoT
             }
         }
         
-        public virtual void RemoveEquip()
+        public virtual void RemoveEquip(int i)
         {
             if (Equipment)
             {
@@ -83,11 +83,11 @@ namespace WoT
                 
                 if (secondChooseTank == 3)
                 {
-                    firstTankShots += _imba.Aiming();
+                    firstTankShots += _imba.Aiming(); // only for imba tank (add aiming)
                 }
                 else if (firstChooseTank == 3)
                 {
-                    secondTankShots += _imba.Aiming();
+                    secondTankShots += _imba.Aiming(); // only for imba tank (add aiming)
                 }
                 
                 // counting the number of shots to kill the first tank

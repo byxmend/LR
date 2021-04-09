@@ -6,6 +6,8 @@ namespace WoT
     {
         private int ArmorRatio { get; set; }
 
+        private readonly Tanks _tanksSet = new Tanks();
+
         public override void FillTanksSet(int i)
         {
             Console.WriteLine("Heavy tank:\n");
@@ -14,9 +16,9 @@ namespace WoT
             base.FillTanksSet(i);
         }
 
-        public override void ShowTanksSet()
+        public override void ShowTanksSet(int i)
         {
-            base.ShowTanksSet();
+            base.ShowTanksSet(i);
             Console.WriteLine($"Armor ratio: {ArmorRatio}");
         }
         
@@ -39,9 +41,9 @@ namespace WoT
         {
             if (!Equipment)
             {
-                HitPoints += 1000;
-                ShotsPerMinute += 1;
-                Equipment = true;
+                _tanksSet[0].HitPoints += 1000;
+                _tanksSet[0].ShotsPerMinute += 1;
+                _tanksSet[0].Equipment = true;
             }
             else
             {
@@ -49,13 +51,13 @@ namespace WoT
             }
         }
         
-        public override void RemoveEquip()
+        public override void RemoveEquip(int i)
         {
             if (Equipment)
             {
-                HitPoints -= 1000;
-                ShotsPerMinute -= 1;
-                Equipment = false;
+                _tanksSet[i].HitPoints -= 1000;
+                _tanksSet[i].ShotsPerMinute -= 1;
+                _tanksSet[i].Equipment = false;
             }
             else
             {
