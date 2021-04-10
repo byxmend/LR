@@ -49,7 +49,7 @@ namespace WoT
         static void Main()
         {
             Tanks tanks = new Tanks();
-            Tank tank = new Tank();
+            Battle battle = new Battle();
 
             HeavyTank.FillTanksSet(0);
             LightTank.FillTanksSet(1);
@@ -92,7 +92,7 @@ namespace WoT
                     case 6:
                         firstChooseTank = tanks.ChooseTank();
                         secondChooseTank = tanks.ChooseTank();
-                        tank.Battle(tanks[firstChooseTank], tanks[secondChooseTank], firstChooseTank, secondChooseTank);
+                        battle.BattleBetweenTanks(tanks[firstChooseTank], tanks[secondChooseTank], firstChooseTank, secondChooseTank);
                         break;
                     case 7:
                         Console.Clear();

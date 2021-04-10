@@ -2,64 +2,13 @@
 
 namespace WoT
 {
-    public class Tank : Tanks
+    public class Battle
     {
-        public int HitPoints { get; protected internal set; }
-        public int ShotsPerMinute { get; protected internal set; }
-        public int DamagePerShoot { get; protected internal set; }
-        public string Name { get; }
-        public string Id { get; }
-        protected internal bool Equipment { get; set; }
-        public Nationality Nation { get; }
-
-        public Tank() { }
-
-        //private readonly HeavyTank _heavyTank = new HeavyTank();
-        //private readonly LightTank _lightTank = new LightTank();
-        //private readonly Imba _imba = new Imba();
-
-        public Tank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, Nationality nation)
-        {
-            HitPoints = hitPoints;
-            ShotsPerMinute = shotsPerMinute;
-            Name = name;
-            Equipment = false;
-            DamagePerShoot = damagePerShoot;
-            Id = GenerationId();
-            Nation = nation;
-        }
-
-        private static string GenerationId() => Guid.NewGuid().ToString();
-
-        public virtual void AddEquip()
-        {
-            if (!Equipment)
-            {
-                HitPoints += 500;
-                ShotsPerMinute += 2;
-                Equipment = true;
-            }
-            else
-            {
-                Console.WriteLine("You can't install the equipment twice");
-            }
-        }
+        private readonly HeavyTank _heavyTank = new HeavyTank();
+        private readonly LightTank _lightTank = new LightTank();
+        private readonly Imba _imba = new Imba();
         
-        public virtual void RemoveEquip(int i)
-        {
-            if (Equipment)
-            {
-                HitPoints -= 500;
-                ShotsPerMinute -= 2;
-                Equipment = false;
-            }
-            else
-            {
-                Console.WriteLine("There is no equipment on the tank anyway");
-            }
-        }
-        /*
-        public void Battle(Tank tank1, Tank tank2, int firstChooseTank, int secondChooseTank)
+        public void BattleBetweenTanks(Tank tank1, Tank tank2, int firstChooseTank, int secondChooseTank)
         {
             Console.WriteLine("\nBattle!\n");
             
@@ -143,6 +92,6 @@ namespace WoT
             {
                 Console.WriteLine("A tank can't fight itself");
             }
-        }*/
+        }
     }
 }
