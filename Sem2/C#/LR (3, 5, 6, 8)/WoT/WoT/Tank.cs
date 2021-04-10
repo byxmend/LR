@@ -9,7 +9,7 @@ namespace WoT
         public int DamagePerShoot { get; set; }
         public string Name { get; }
         public string Id { get; }
-        protected internal bool Equipment = true;
+        protected internal bool Equipment { get; set; }
         public Nationality Nation { get; }
 
         public Tank() { }

@@ -70,7 +70,6 @@ namespace WoT
         
         public virtual void FillTanksSet(int i)
         {
-            /*
             int hitPoints;
             int shotsPerMinute;
             string name;
@@ -104,10 +103,9 @@ namespace WoT
                     nation = Nationality.Multinational;
                     break;
             }
-            */
-            this[i] = new Tank(2500, 5, "e100", 650, Nationality.Germany);
-            // this[i] = new Tank(hitPoints, shotsPerMinute, name, damagePerShoot, nation);
-            // Console.Clear();
+                
+            this[i] = new Tank(hitPoints, shotsPerMinute, name, damagePerShoot, nation);
+            Console.Clear();
         }
 
         public virtual void ShowTanksSet(int i)

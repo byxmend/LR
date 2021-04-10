@@ -12,13 +12,13 @@ namespace WoT
 
             switch (chooseNewTank)
             {
-                case 1:
+                case 0:
                     heavyTank.AddEquip();
                     break;
-                case 2:
+                case 1:
                     lightTank.AddEquip();
                     break;
-                case 3:
+                case 2:
                     tank.AddEquip();
                     break;
                 default:
@@ -35,13 +35,13 @@ namespace WoT
 
             switch (chooseNewTank)
             {
-                case 1:
+                case 0:
                     heavyTank.RemoveEquip();
                     break;
-                case 2:
+                case 1:
                     lightTank.RemoveEquip();
                     break;
-                case 3:
+                case 2:
                     tank.RemoveEquip();
                     break;
                 default:
