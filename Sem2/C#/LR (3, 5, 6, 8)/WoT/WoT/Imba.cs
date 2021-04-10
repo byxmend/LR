@@ -12,7 +12,7 @@ namespace WoT
             string color = Console.ReadLine();
             Console.Write("Season: ");
             string season = Console.ReadLine();
-            Console.Write("Disguise: (1 - 10)");
+            Console.Write("Disguise (1 - 10): ");
             int disguise = CheckInt();
 
             _camo = new Camo(color, season, disguise);
@@ -20,7 +20,7 @@ namespace WoT
         
         public override void FillTanksSet(int i)
         {
-            Console.WriteLine("Imba tank:\n");
+            Console.WriteLine("Imba tank:");
             FillCamo();
             base.FillTanksSet(i);
         }

@@ -11,10 +11,10 @@ namespace WoT
 
         public override void FillTanksSet(int i)
         {
-            Console.WriteLine("Light tank:\n");
-            Console.WriteLine("Enter damage from air support:");
+            Console.WriteLine("Light tank:");
+            Console.Write("Enter damage from air support: ");
             DamageAirSupport = CheckInt();
-            Console.WriteLine("Enter the number of air supports per minute:");
+            Console.Write("Enter the number of air supports per minute: ");
             AirSupportPerMinute = CheckInt();
             base.FillTanksSet(i);
         }
@@ -35,11 +35,11 @@ namespace WoT
         
         public override void AddEquip()
         {
-            if (!Equipment)
+            if (!_tanksSet[1].Equipment)
             {
-                _tanksSet[0].HitPoints += 350;
-                _tanksSet[0].ShotsPerMinute += 4;
-                _tanksSet[0].Equipment = true;
+                _tanksSet[1].HitPoints += 350;
+                _tanksSet[1].ShotsPerMinute += 4;
+                _tanksSet[1].Equipment = true;
             }
             else
             {
@@ -47,13 +47,13 @@ namespace WoT
             }
         }
         
-        public override void RemoveEquip(int i)
+        public override void RemoveEquip()
         {
             if (Equipment)
             {
-                _tanksSet[i].HitPoints -= 350;
-                _tanksSet[i].ShotsPerMinute -= 4;
-                _tanksSet[i].Equipment = false;
+                _tanksSet[1].HitPoints -= 350;
+                _tanksSet[1].ShotsPerMinute -= 4;
+                _tanksSet[1].Equipment = false;
             }
             else
             {

@@ -4,22 +4,22 @@ namespace WoT
 {
     static class Program
     {
-        private static readonly HeavyTank HeavyTank = new HeavyTank();
-        private static readonly LightTank LightTank = new LightTank();
-        private static readonly Imba Imba = new Imba();
-        
         static void SwitchAddEquip(int chooseNewTank)
         {
+            HeavyTank heavyTank = new HeavyTank();
+            LightTank lightTank = new LightTank();
+            Tank tank = new Tank();
+
             switch (chooseNewTank)
             {
                 case 1:
-                    HeavyTank.AddEquip();
+                    heavyTank.AddEquip();
                     break;
                 case 2:
-                    LightTank.AddEquip();
+                    lightTank.AddEquip();
                     break;
                 case 3:
-                    Imba.AddEquip();
+                    tank.AddEquip();
                     break;
                 default:
                     Console.WriteLine("Error");
@@ -29,16 +29,20 @@ namespace WoT
         
         static void SwitchRemoveEquip(int chooseNewTank)
         {
+            HeavyTank heavyTank = new HeavyTank();
+            LightTank lightTank = new LightTank();
+            Tank tank = new Tank();
+
             switch (chooseNewTank)
             {
                 case 1:
-                    HeavyTank.RemoveEquip(0);
+                    heavyTank.RemoveEquip();
                     break;
                 case 2:
-                    LightTank.RemoveEquip(1);
+                    lightTank.RemoveEquip();
                     break;
                 case 3:
-                    Imba.RemoveEquip(2);
+                    tank.RemoveEquip();
                     break;
                 default:
                     Console.WriteLine("Error");
@@ -50,14 +54,17 @@ namespace WoT
         {
             Tanks tanks = new Tanks();
             Battle battle = new Battle();
+            HeavyTank heavyTank = new HeavyTank();
+            LightTank lightTank = new LightTank();
+            Imba imba = new Imba();
 
-            HeavyTank.FillTanksSet(0);
-            LightTank.FillTanksSet(1);
-            Imba.FillTanksSet(2);
+            heavyTank.FillTanksSet(0);
+            lightTank.FillTanksSet(1);
+            imba.FillTanksSet(2);
             
-            HeavyTank.ShowTanksSet(0);
-            LightTank.ShowTanksSet(1);
-            Imba.ShowTanksSet(2);
+            heavyTank.ShowTanksSet(0);
+            lightTank.ShowTanksSet(1);
+            imba.ShowTanksSet(2);
             
             int[] array = new int[3];
             int firstChooseTank;
@@ -66,18 +73,18 @@ namespace WoT
             while (true)
             {
                 tanks.Menu();
-                
+
                 switch (tanks.CheckInt())
                 {
                     case 1:
-                        HeavyTank.FillTanksSet(0);
-                        LightTank.FillTanksSet(1);
-                        Imba.FillTanksSet(2);
+                        heavyTank.FillTanksSet(0);
+                        lightTank.FillTanksSet(1);
+                        imba.FillTanksSet(2);
                         break;
                     case 2:
-                        HeavyTank.ShowTanksSet(0);
-                        LightTank.ShowTanksSet(1);
-                        Imba.ShowTanksSet(2);
+                        heavyTank.ShowTanksSet(0);
+                        lightTank.ShowTanksSet(1);
+                        imba.ShowTanksSet(2);
                         break;
                     case 3:
                         SwitchAddEquip(tanks.ChooseTank());
@@ -87,7 +94,6 @@ namespace WoT
                         break;
                     case 5:
                         tanks.MenuEquipment(array);
-                        Imba.AddFeatures(array[0], array[1], array[2]);
                         break;
                     case 6:
                         firstChooseTank = tanks.ChooseTank();
