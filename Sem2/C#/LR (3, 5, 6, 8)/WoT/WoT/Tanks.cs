@@ -49,7 +49,7 @@ namespace WoT
                               "Other - Turn off");
         }
 
-        public void MenuEquipment(int[] array)
+        public void MenuEquipment(Tanks tanks, int[] array)
         {
             Console.WriteLine("\nEnter hitPoints:");
             array[0] = CheckInt();
@@ -58,17 +58,17 @@ namespace WoT
             Console.WriteLine("Enter damage per shot:");
             array[2] = CheckInt();
             
-            AddFeatures(array[0], array[1], array[2]);
+            AddFeatures(tanks, array[0], array[1], array[2]);
         }
         
-        public override void AddFeatures(int hitPoints, int shotsPerMinute, int damagePerShot)
+        public override void AddFeatures(Tanks tanks, int hitPoints, int shotsPerMinute, int damagePerShot)
         {
-            this[2].HitPoints += hitPoints;
-            this[2].ShotsPerMinute += shotsPerMinute;
-            this[2].DamagePerShoot += damagePerShot;
+            tanks[2].HitPoints += hitPoints;
+            tanks[2].ShotsPerMinute += shotsPerMinute;
+            tanks[2].DamagePerShoot += damagePerShot;
         }
         
-        public virtual void FillTanksSet(int i)
+        public virtual void FillTanksSet(Tanks tanks, int i)
         {
             int hitPoints;
             int shotsPerMinute;
@@ -104,15 +104,15 @@ namespace WoT
                     break;
             }
                 
-            this[i] = new Tank(hitPoints, shotsPerMinute, name, damagePerShoot, nation);
+            tanks[i] = new Tank(hitPoints, shotsPerMinute, name, damagePerShoot, nation);
             Console.Clear();
         }
 
-        public virtual void ShowTanksSet(int i)
+        public virtual void ShowTanksSet(Tanks tanks, int i)
         {
-            Console.WriteLine($"\nHitPoints: {this[i].HitPoints}\nShotsPerMinute: {this[i].ShotsPerMinute}\n" +
-                              $"Name: {this[i].Name}\nId: {this[i].Id}\nDamagePerShoot: " +
-                              $"{this[i].DamagePerShoot}\nNation: {this[i].Nation}\n");
+            Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                              $"Name: {tanks[i].Name}\nId: {tanks[i].Id}\nDamagePerShoot: " +
+                              $"{tanks[i].DamagePerShoot}\nNation: {tanks[i].Nation}\n");
         }
     }
 }

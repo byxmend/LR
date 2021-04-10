@@ -6,17 +6,17 @@ namespace WoT
     {
         private int ArmorRatio { get; set; }
 
-        public override void FillTanksSet(int i)
+        public override void FillTanksSet(Tanks tanks, int i)
         {
             Console.WriteLine("Heavy tank:");
             Console.Write("Enter armor ratio: ");
             ArmorRatio = CheckInt();
-            base.FillTanksSet(i);
+            base.FillTanksSet(tanks, i);
         }
 
-        public override void ShowTanksSet(int i)
+        public override void ShowTanksSet(Tanks tanks, int i)
         {
-            base.ShowTanksSet(i);
+            base.ShowTanksSet(tanks, i);
             Console.WriteLine($"Armor ratio: {ArmorRatio}");
         }
         
@@ -35,15 +35,13 @@ namespace WoT
             return counter;
         }
         
-        public override void AddEquip()
+        public override void AddEquip(Tanks tanks, int i)
         {
-            Tanks tanksSet = new Tanks();
-
-            if (!tanksSet[0].Equipment)
+            if (!tanks[i].Equipment)
             {
-                tanksSet[0].HitPoints += 1000;
-                tanksSet[0].ShotsPerMinute += 1;
-                tanksSet[0].Equipment = true;
+                tanks[i].HitPoints += 1000;
+                tanks[i].ShotsPerMinute += 1;
+                tanks[i].Equipment = true;
             }
             else
             {
@@ -51,15 +49,13 @@ namespace WoT
             }
         }
         
-        public override void RemoveEquip()
+        public override void RemoveEquip(Tanks tanks, int i)
         {
-            Tanks tanksSet = new Tanks();
-            
-            if (tanksSet[0].Equipment)
+            if (tanks[i].Equipment)
             {
-                tanksSet[0].HitPoints -= 1000;
-                tanksSet[0].ShotsPerMinute -= 1;
-                tanksSet[0].Equipment = false;
+                tanks[i].HitPoints -= 1000;
+                tanks[i].ShotsPerMinute -= 1;
+                tanks[i].Equipment = false;
             }
             else
             {

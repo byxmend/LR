@@ -18,16 +18,16 @@ namespace WoT
             _camo = new Camo(color, season, disguise);
         }
         
-        public override void FillTanksSet(int i)
+        public override void FillTanksSet(Tanks tanks, int i)
         {
             Console.WriteLine("Imba tank:");
             FillCamo();
-            base.FillTanksSet(i);
+            base.FillTanksSet(tanks, i);
         }
 
-        public override void ShowTanksSet(int i)
+        public override void ShowTanksSet(Tanks tanks, int i)
         {
-            base.ShowTanksSet(i);
+            base.ShowTanksSet(tanks, i);
             _camo.DisplayInfo();
         }
 

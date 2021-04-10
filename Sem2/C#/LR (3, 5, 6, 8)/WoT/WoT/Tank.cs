@@ -27,13 +27,13 @@ namespace WoT
 
         private static string GenerationId() => Guid.NewGuid().ToString();
 
-        public virtual void AddEquip()
+        public virtual void AddEquip(Tanks tanks, int i)
         {
-            if (!Equipment)
+            if (!tanks[i].Equipment)
             {
-                HitPoints += 500;
-                ShotsPerMinute += 2;
-                Equipment = true;
+                tanks[i].HitPoints += 500;
+                tanks[i].ShotsPerMinute += 2;
+                tanks[i].Equipment = true;
             }
             else
             {
@@ -41,13 +41,13 @@ namespace WoT
             }
         }
         
-        public virtual void RemoveEquip()
+        public virtual void RemoveEquip(Tanks tanks, int i)
         {
-            if (Equipment)
+            if (tanks[i].Equipment)
             {
-                HitPoints -= 500;
-                ShotsPerMinute -= 2;
-                Equipment = false;
+                tanks[i].HitPoints -= 500;
+                tanks[i].ShotsPerMinute -= 2;
+                tanks[i].Equipment = false;
             }
             else
             {

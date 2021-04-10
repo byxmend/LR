@@ -8,18 +8,18 @@ namespace WoT
         private readonly LightTank _lightTank = new LightTank();
         private readonly Imba _imba = new Imba();
         
-        public void BattleBetweenTanks(Tank tank1, Tank tank2, int firstChooseTank, int secondChooseTank)
+        public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank)
         {
             Console.WriteLine("\nBattle!\n");
             
             int firstTankShots = 0;
             int secondTankShots = 0;
-            int firstTankHp = tank1.HitPoints;
-            int secondTankHp = tank2.HitPoints;
+            int firstTankHp = tanks[firstChooseTank].HitPoints;
+            int secondTankHp = tanks[secondChooseTank].HitPoints;
             double shotRatio1 = 0;
             double shotRatio2 = 0;
 
-            if (tank1 != tank2)
+            if (tanks[firstChooseTank] != tanks[secondChooseTank])
             {
                 if (secondTankHp > 0 && firstChooseTank == 2)
                 {
@@ -42,7 +42,7 @@ namespace WoT
                 // counting the number of shots to kill the first tank
                 while (firstTankHp > 0)
                 {
-                    firstTankHp -= tank1.DamagePerShoot;
+                    firstTankHp -= tanks[firstChooseTank].DamagePerShoot;
                     firstTankShots++;
                     
                     if (secondChooseTank == 1)
@@ -54,7 +54,7 @@ namespace WoT
                 // counting the number of shots to kill the second tank
                 while (secondTankHp > 0)
                 {
-                    secondTankHp -= tank2.DamagePerShoot;
+                    secondTankHp -= tanks[secondChooseTank].DamagePerShoot;
                     secondTankShots++;
 
                     if (secondChooseTank == 1)
@@ -63,12 +63,12 @@ namespace WoT
                     }
                 }
 
-                if (secondTankShots > 0 && tank2.ShotsPerMinute > 0)
+                if (secondTankShots > 0 && tanks[secondChooseTank].ShotsPerMinute > 0)
                 {
                     // ReSharper disable once PossibleLossOfFraction
                     shotRatio1 = firstTankShots / secondTankShots;
                     // ReSharper disable once PossibleLossOfFraction
-                    shotRatio2 = tank1.ShotsPerMinute / tank2.ShotsPerMinute;
+                    shotRatio2 = tanks[firstChooseTank].ShotsPerMinute / tanks[secondChooseTank].ShotsPerMinute;
                 }
                 else
                 {

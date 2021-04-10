@@ -9,19 +9,19 @@ namespace WoT
 
         private readonly Tanks _tanksSet = new Tanks();
 
-        public override void FillTanksSet(int i)
+        public override void FillTanksSet(Tanks tanks, int i)
         {
             Console.WriteLine("Light tank:");
             Console.Write("Enter damage from air support: ");
             DamageAirSupport = CheckInt();
             Console.Write("Enter the number of air supports per minute: ");
             AirSupportPerMinute = CheckInt();
-            base.FillTanksSet(i);
+            base.FillTanksSet(tanks, i);
         }
 
-        public override void ShowTanksSet(int i)
+        public override void ShowTanksSet(Tanks tanks, int i)
         {
-            base.ShowTanksSet(i);
+            base.ShowTanksSet(tanks, i);
             Console.WriteLine($"Damage from air support: {DamageAirSupport}");
             Console.WriteLine($"The number of air supports per minute: {AirSupportPerMinute}");
         }
@@ -33,13 +33,13 @@ namespace WoT
             return value;
         }
         
-        public override void AddEquip()
+        public override void AddEquip(Tanks tanks, int i)
         {
-            if (!_tanksSet[1].Equipment)
+            if (!tanks[i].Equipment)
             {
-                _tanksSet[1].HitPoints += 350;
-                _tanksSet[1].ShotsPerMinute += 4;
-                _tanksSet[1].Equipment = true;
+                tanks[i].HitPoints += 350;
+                tanks[i].ShotsPerMinute += 4;
+                tanks[i].Equipment = true;
             }
             else
             {
@@ -47,13 +47,13 @@ namespace WoT
             }
         }
         
-        public override void RemoveEquip()
+        public override void RemoveEquip(Tanks tanks, int i)
         {
-            if (Equipment)
+            if (tanks[i].Equipment)
             {
-                _tanksSet[1].HitPoints -= 350;
-                _tanksSet[1].ShotsPerMinute -= 4;
-                _tanksSet[1].Equipment = false;
+                tanks[i].HitPoints -= 350;
+                tanks[i].ShotsPerMinute -= 4;
+                tanks[i].Equipment = false;
             }
             else
             {
