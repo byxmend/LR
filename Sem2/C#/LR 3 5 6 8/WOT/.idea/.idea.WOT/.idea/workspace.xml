@@ -5,67 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/Battle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/Camo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/HeavyTank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/LightTank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/MediumTank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/Menu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/Nationality.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/Tank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WOT/Tanks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.idea/.idea.WoT/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.idea/.idea.WoT/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.idea/.idea.WoT/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.idea/.idea.WoT/.idea/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.idea/.idea.WoT/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.vs/WoT/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/.vs/WoT/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Battle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Camo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/HeavyTank.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Imba.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/InputOutput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/LightTank.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Nationality.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Tank.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/Tanks.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/WoT.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/WoT.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/WoT.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/WoT.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/WoT.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/WoT.runtimeconfig.dev.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/WoT.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/bin/Debug/net5.0/ref/WoT.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/WoT.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/Debug/net5.0/ref/WoT.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/WoT.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/WoT.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/WoT.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LR (3, 5, 6, 8)/WoT/WoT/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Tanks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Tanks.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,12 +23,12 @@
       <option value="$PROJECT_DIR$/WOT/Camo.cs" />
       <option value="$PROJECT_DIR$/WOT/Battle.cs" />
       <option value="$PROJECT_DIR$/WOT/Menu.cs" />
-      <option value="$PROJECT_DIR$/WOT/Tanks.cs" />
       <option value="$PROJECT_DIR$/WOT/LightTank.cs" />
       <option value="$PROJECT_DIR$/WOT/HeavyTank.cs" />
       <option value="$PROJECT_DIR$/WOT/MediumTank.cs" />
       <option value="$PROJECT_DIR$/WOT/Program.cs" />
       <option value="$PROJECT_DIR$/WOT/Tank.cs" />
+      <option value="$PROJECT_DIR$/WOT/Tanks.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r7yJDyi14P1ocCehbYsTZtoyEK" />
@@ -134,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618341348365</updated>
       <workItem from="1618341351865" duration="5507000" />
-      <workItem from="1618346898041" duration="9006000" />
+      <workItem from="1618346898041" duration="9267000" />
     </task>
     <servers />
   </component>

@@ -109,9 +109,26 @@ namespace WOT
         {
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
-                                  $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
-                                  $"{tanks[i].Nation}\nArmor ratio: {tanks[i].ArmorRatio}");
+                switch (i)
+                {
+                    case 0:
+                        Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                                          $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
+                                          $"{tanks[i].Nation}\nArmor ratio: {tanks[i].ArmorRatio}");
+                        break;
+                    case 1:
+                        Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                                          $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
+                                          $"{tanks[i].Nation}\n");
+                        break;
+                    default:
+                        Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                                          $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
+                                          $"{tanks[i].Nation}\nArmor ratio: {tanks[i].ArmorRatio}\nDamage air support: " +
+                                          $"{tanks[i].DamageAirSupport}\nNumbers of air support per minute: " +
+                                          $"{tanks[i].AirSupportPerMinute}");
+                        break;
+                }
             }
         }
     }
