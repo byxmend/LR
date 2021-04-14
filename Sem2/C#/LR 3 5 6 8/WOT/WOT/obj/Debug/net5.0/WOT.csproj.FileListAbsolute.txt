@@ -1,0 +1,16 @@
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\WOT.exe
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\WOT.deps.json
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\WOT.runtimeconfig.json
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\WOT.runtimeconfig.dev.json
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\WOT.dll
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\ref\WOT.dll
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\bin\Debug\net5.0\WOT.pdb
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.csprojAssemblyReference.cache
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.GeneratedMSBuildEditorConfig.editorconfig
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.AssemblyInfoInputs.cache
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.AssemblyInfo.cs
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.csproj.CoreCompileInputs.cache
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.dll
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\ref\WOT.dll
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.pdb
+D:\LR\Sem2\C#\LR 3 5 6 8\WOT\WOT\obj\Debug\net5.0\WOT.genruntimeconfig.cache
