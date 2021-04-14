@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Menu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WOT/Tanks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Tanks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +29,12 @@
       <option value="$PROJECT_DIR$/WOT/OutputMethods.cs" />
       <option value="$PROJECT_DIR$/WOT/Camo.cs" />
       <option value="$PROJECT_DIR$/WOT/Battle.cs" />
-      <option value="$PROJECT_DIR$/WOT/Menu.cs" />
       <option value="$PROJECT_DIR$/WOT/LightTank.cs" />
       <option value="$PROJECT_DIR$/WOT/HeavyTank.cs" />
       <option value="$PROJECT_DIR$/WOT/MediumTank.cs" />
       <option value="$PROJECT_DIR$/WOT/Program.cs" />
       <option value="$PROJECT_DIR$/WOT/Tank.cs" />
+      <option value="$PROJECT_DIR$/WOT/Menu.cs" />
       <option value="$PROJECT_DIR$/WOT/Tanks.cs" />
     </changedPaths>
   </component>
@@ -75,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618341348365</updated>
       <workItem from="1618341351865" duration="5507000" />
-      <workItem from="1618346898041" duration="9267000" />
+      <workItem from="1618346898041" duration="9900000" />
     </task>
     <servers />
   </component>

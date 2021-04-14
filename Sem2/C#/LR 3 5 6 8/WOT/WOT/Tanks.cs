@@ -40,6 +40,19 @@ namespace WOT
         {
             for (int i = 0; i < 3; i++)
             {
+                switch (i)
+                {
+                    case 0:
+                        Console.Write("\nHeavy tank");
+                        break;
+                    case 1:
+                        Console.Write("\nMedium tank");
+                        break;
+                    default:
+                        Console.Write("\nLight tank");
+                        break;
+                }
+                
                 int hitPoints;
                 int shotsPerMinute;
                 string name;
@@ -47,7 +60,7 @@ namespace WOT
                 int nationInt;
                 Nationality nation;
 
-                Console.Write("\n\nEnter the hit points: ");
+                Console.Write("\nEnter the hit points: ");
                 hitPoints = _program.CheckInt();
                 Console.Write("Enter the number of shots fired per minute: ");
                 shotsPerMinute = _program.CheckInt();

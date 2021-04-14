@@ -13,7 +13,7 @@ namespace WOT
         {
             Console.WriteLine("\nSelect an action:\n1 - Fill tanks set\n2 - Show tanks set\n3 - Add standard equipment\n" +
                               "4 - Remove standard equipment\n5 - Add features\n6 - Battle\n7 - Clear console\n" +
-                              "Other - Turn off");
+                              "Other number - Turn off");
         }
 
         public void MenuAddFeatures(Tanks tanks, int[] array, int index)
