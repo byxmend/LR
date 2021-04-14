@@ -40,6 +40,13 @@ namespace WOT
         {
             for (int i = 0; i < 3; i++)
             {
+                int hitPoints;
+                int shotsPerMinute;
+                string name;
+                int damagePerShoot;
+                int nationInt;
+                Nationality nation;
+                
                 switch (i)
                 {
                     case 0:
@@ -52,13 +59,6 @@ namespace WOT
                         Console.Write("\nLight tank");
                         break;
                 }
-                
-                int hitPoints;
-                int shotsPerMinute;
-                string name;
-                int damagePerShoot;
-                int nationInt;
-                Nationality nation;
 
                 Console.Write("\nEnter the hit points: ");
                 hitPoints = _program.CheckInt();
@@ -94,8 +94,7 @@ namespace WOT
                         Console.Write("Enter the armor ratio: ");
                         int armorRatio = _program.CheckInt();
 
-                        tanks[i] = new HeavyTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation,
-                            armorRatio);
+                        tanks[i] = new HeavyTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, armorRatio);
                         break;
                     }
                     case 1:
