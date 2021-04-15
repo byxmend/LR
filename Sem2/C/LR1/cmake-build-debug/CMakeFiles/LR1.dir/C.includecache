@@ -6,13 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/LR/Sem2/C/LR3/main.c
+D:/LR/Sem2/C/LR1/main.c
 stdio.h
--
-time.h
--
-windows.h
--
-stdlib.h
 -
 
