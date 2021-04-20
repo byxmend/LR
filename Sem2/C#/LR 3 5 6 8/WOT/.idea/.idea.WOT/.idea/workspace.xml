@@ -4,7 +4,13 @@
     <projectFile>WOT/WOT.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="" />
+    <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../C/LR4/LR4.2/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../C/LR4/LR4.2/cmake-build-debug/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../C/LR4/LR4.2/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +81,9 @@
       <workItem from="1618346898041" duration="9916000" />
       <workItem from="1618424363337" duration="71000" />
       <workItem from="1618433124885" duration="597000" />
+      <workItem from="1618488093469" duration="713000" />
+      <workItem from="1618491298348" duration="794000" />
+      <workItem from="1618768028857" duration="596000" />
     </task>
     <servers />
   </component>
