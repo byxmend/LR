@@ -5,11 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../C/LR4/LR4.2/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../C/LR4/LR4.2/cmake-build-debug/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../C/LR4/LR4.2/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WOT/ICrew.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Camo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Camo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/MediumTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/MediumTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Tanks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Tanks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/CMakeFiles/LR1.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/CMakeFiles/LR1.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/CMakeFiles/LR1.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/CMakeFiles/LR1.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/LR1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/LR1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/LR1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/LR1.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/LR1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/LR1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2.2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2.2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/CMakeCCompilerId.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/CMakeCCompilerId.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/LR2.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/LR2.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/LR2.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/LR2.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/LR2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/LR2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/LR2.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/LR2.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/LR2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/LR2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/CMakeFiles/LR3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/CMakeFiles/LR3.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR3/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +57,16 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/WOT/Nationality.cs" />
       <option value="$PROJECT_DIR$/WOT/OutputMethods.cs" />
-      <option value="$PROJECT_DIR$/WOT/Camo.cs" />
-      <option value="$PROJECT_DIR$/WOT/Battle.cs" />
       <option value="$PROJECT_DIR$/WOT/LightTank.cs" />
       <option value="$PROJECT_DIR$/WOT/HeavyTank.cs" />
+      <option value="$PROJECT_DIR$/WOT/Battle.cs" />
       <option value="$PROJECT_DIR$/WOT/MediumTank.cs" />
-      <option value="$PROJECT_DIR$/WOT/Program.cs" />
+      <option value="$PROJECT_DIR$/WOT/Camo.cs" />
       <option value="$PROJECT_DIR$/WOT/Tank.cs" />
+      <option value="$PROJECT_DIR$/WOT/ICrewTraining.cs" />
       <option value="$PROJECT_DIR$/WOT/Menu.cs" />
+      <option value="$PROJECT_DIR$/WOT/Program.cs" />
+      <option value="$PROJECT_DIR$/WOT/ICrew.cs" />
       <option value="$PROJECT_DIR$/WOT/Tanks.cs" />
     </changedPaths>
   </component>
@@ -47,6 +83,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -84,6 +121,9 @@
       <workItem from="1618488093469" duration="713000" />
       <workItem from="1618491298348" duration="794000" />
       <workItem from="1618768028857" duration="596000" />
+      <workItem from="1619036248081" duration="1429000" />
+      <workItem from="1619038783434" duration="757000" />
+      <workItem from="1619081778023" duration="1516000" />
     </task>
     <servers />
   </component>
@@ -95,9 +135,20 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="1">
           <value>
             <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -24,7 +24,7 @@ namespace WOT
         
         private Camo _camo;
         
-        private void FillCamo()
+        public void FillCamo()
         {
             Console.Write("Fill camo:\nColor: ");
             string color = Console.ReadLine();

@@ -59,6 +59,13 @@ namespace WOT
                         battle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
                         break;
                     case 7:
+                        index = tanks.ChooseTank();
+                        tanks.CrewTraining(tanks, index);
+                        break;
+                    case 8:
+                        // TODO (dismiss the crew)
+                        break;
+                    case 9:
                         Console.Clear();
                         break;
                     default:

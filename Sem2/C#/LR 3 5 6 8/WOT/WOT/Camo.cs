@@ -17,7 +17,7 @@ namespace WOT
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"Color: {_color}\nSeason: {_season}\nDisguise: {Disguise}");
+            Console.WriteLine($"Color: {_color}\nSeason: {_season}\nDisguise: {Disguise}\n");
         }
     }
 }

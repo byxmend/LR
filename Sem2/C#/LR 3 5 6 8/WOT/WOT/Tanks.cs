@@ -2,13 +2,11 @@
 
 namespace WOT
 {
-    public class Tanks
+    public class Tanks : ICrew
     {
         private readonly Tank[] _tanksSet;
 
         private readonly Program _program = new Program();
-        
-        private readonly HeavyTank _heavyTank = new HeavyTank();
 
         public Tanks()
         {
@@ -20,7 +18,23 @@ namespace WOT
             get => _tanksSet[index];
             private set => _tanksSet[index] = value;
         }
-        
+
+        public void CrewTraining(Tanks tanks, int index)
+        {
+            tanks[index].ShotsPerMinute += 1;
+            tanks[index].DamagePerShoot += 150;
+        }
+
+        public void DismissACrew(Tank tank, int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void HireACrew(Tanks tanks, int index)
+        {
+            throw new NotImplementedException();
+        }
+
         public int ChooseTank()
         {
             Console.WriteLine("\nChoose number of the tank:");
@@ -124,17 +138,17 @@ namespace WOT
                 switch (i)
                 {
                     case 0:
-                        Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                        Console.WriteLine($"\nHeavy tank:\n\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
                                           $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
                                           $"{tanks[i].Nation}\nArmor ratio: {tanks[i].ArmorRatio}");
                         break;
                     case 1:
-                        Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                        Console.WriteLine($"\nMedium tank:\n\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
                                           $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
-                                          $"{tanks[i].Nation}\n");
+                                          $"{tanks[i].Nation}");
                         break;
                     default:
-                        Console.WriteLine($"\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
+                        Console.WriteLine($"\nLight tank:\n\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
                                           $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
                                           $"{tanks[i].Nation}\nArmor ratio: {tanks[i].ArmorRatio}\nDamage air support: " +
                                           $"{tanks[i].DamageAirSupport}\nNumbers of air support per minute: " +

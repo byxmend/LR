@@ -12,8 +12,8 @@ namespace WOT
         public void GeneralMenu()
         {
             Console.WriteLine("\nSelect an action:\n1 - Fill tanks set\n2 - Show tanks set\n3 - Add standard equipment\n" +
-                              "4 - Remove standard equipment\n5 - Add features\n6 - Battle\n7 - Clear console\n" +
-                              "Other number - Turn off");
+                              "4 - Remove standard equipment\n5 - Add features\n6 - Battle\n7 - Train the crew\n" +
+                              "8 - Dismiss the crew\n9 - Clear console\nOther number - Turn off");
         }
 
         public void MenuAddFeatures(Tanks tanks, int[] array, int index)

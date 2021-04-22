@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="C:\Users\nikita\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\nikita\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_WOT.-2123800611.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nikita\AppData\Roaming\JetBrains\Rider2020.3\consoles\db" t="IncludeRecursive" />
     <e p="D:\LR\Sem2\C#\LR 3 5 6 8\WOT" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="WOT" t="IncludeRecursive">
@@ -10,6 +11,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Camo.cs" t="Include" />
         <e p="HeavyTank.cs" t="Include" />
+        <e p="ICrew.cs" t="Include" />
         <e p="LightTank.cs" t="Include" />
         <e p="MediumTank.cs" t="Include" />
         <e p="Menu.cs" t="Include" />
