@@ -11,7 +11,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Camo.cs" t="Include" />
         <e p="HeavyTank.cs" t="Include" />
-        <e p="ICrew.cs" t="Include" />
+        <e p="IBattleMethods.cs" t="Include" />
         <e p="LightTank.cs" t="Include" />
         <e p="MediumTank.cs" t="Include" />
         <e p="Menu.cs" t="Include" />

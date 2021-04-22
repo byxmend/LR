@@ -2,7 +2,7 @@
 
 namespace WOT
 {
-    public class Tanks : ICrew
+    public class Tanks
     {
         private readonly Tank[] _tanksSet;
 
@@ -17,22 +17,6 @@ namespace WOT
         {
             get => _tanksSet[index];
             private set => _tanksSet[index] = value;
-        }
-
-        public void CrewTraining(Tanks tanks, int index)
-        {
-            tanks[index].ShotsPerMinute += 1;
-            tanks[index].DamagePerShoot += 150;
-        }
-
-        public void DismissACrew(Tank tank, int index)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void HireACrew(Tanks tanks, int index)
-        {
-            throw new NotImplementedException();
         }
 
         public int ChooseTank()
