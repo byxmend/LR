@@ -4,37 +4,25 @@ namespace WOT
 {
     public class MediumTank : Tank
     {
+        public sealed override int Disguise { get; set; }
         public override int ArmorRatio { get; set; }
         public override int DamageAirSupport { get; set; }
         public override double AirSupportPerMinute { get; set; }
 
         public MediumTank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, 
-            Nationality nation) : base(hitPoints, shotsPerMinute, name, damagePerShoot, nation)
+            Nationality nation, int disguise) : base(hitPoints, shotsPerMinute, name, damagePerShoot, nation)
         {
             HitPoints = hitPoints;
             ShotsPerMinute = shotsPerMinute;
             Name = name;
             DamagePerShoot = damagePerShoot;
             Nation = nation;
+            Disguise = disguise;
         }
         
         public MediumTank() { }
         
         private readonly Program _program = new Program();
-        
-        private Camo _camo;
-        
-        public void FillCamo()
-        {
-            Console.Write("Fill camo:\nColor: ");
-            string color = Console.ReadLine();
-            Console.Write("Season: ");
-            string season = Console.ReadLine();
-            Console.Write("Disguise (1 - 10): ");
-            int disguise = _program.CheckInt();
-
-            _camo = new Camo(color, season, disguise);
-        }
 
         public override void AddEquip(Tanks tanks, int index)
         {
@@ -68,20 +56,20 @@ namespace WOT
             
             while (true)
             {
-                if (_camo.Disguise > 0 && _camo.Disguise < 6)
+                if (Disguise > 0 && Disguise < 6)
                 {
-                    value = _camo.Disguise / 2;
+                    value = Disguise / 2;
                     return value;
                 }
                 
-                if (_camo.Disguise > 5 && _camo.Disguise < 11)
+                if (Disguise > 5 && Disguise < 11)
                 {
-                    value = _camo.Disguise / 3;
+                    value = Disguise / 3;
                     return value;
                 }
 
                 Console.WriteLine("Range: 1 - 10, try again");
-                _camo.Disguise = _program.CheckInt();
+                Disguise = _program.CheckInt();
             }
         }
     }

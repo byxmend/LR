@@ -2,7 +2,7 @@
 
 namespace WOT
 {
-    public class Battle : IBattleMethods
+    public class Battle : ICalculatePoints, IAbilities
     {
         private readonly HeavyTank _heavyTank = new HeavyTank();
 

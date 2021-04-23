@@ -20,8 +20,7 @@ namespace WOT
             Menu menu = new Menu();
             Battle battle = new Battle();
             Tanks tanks = new Tanks();
-            HeavyTank heavyTank = new HeavyTank();
-
+            
             int[] array = new int[3];
             int firstChooseTank;
             int secondChooseTank;

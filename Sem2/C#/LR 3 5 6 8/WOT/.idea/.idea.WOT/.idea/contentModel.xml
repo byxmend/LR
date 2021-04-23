@@ -9,9 +9,9 @@
       <e p="WOT" t="IncludeRecursive">
         <e p="Battle.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Camo.cs" t="Include" />
         <e p="HeavyTank.cs" t="Include" />
-        <e p="IBattleMethods.cs" t="Include" />
+        <e p="IAbilities.cs" t="Include" />
+        <e p="ICalculatePoints.cs" t="Include" />
         <e p="LightTank.cs" t="Include" />
         <e p="MediumTank.cs" t="Include" />
         <e p="Menu.cs" t="Include" />

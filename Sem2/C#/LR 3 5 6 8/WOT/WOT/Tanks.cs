@@ -8,6 +8,8 @@ namespace WOT
 
         private readonly Program _program = new Program();
 
+        private readonly MediumTank _mediumTank = new MediumTank();
+
         public Tanks()
         {
             _tanksSet = new Tank[3];
@@ -91,12 +93,13 @@ namespace WOT
                     {
                         Console.Write("Enter the armor ratio: ");
                         int armorRatio = _program.CheckInt();
-
                         tanks[i] = new HeavyTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, armorRatio);
                         break;
                     }
                     case 1:
-                        tanks[i] = new MediumTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation);
+                        Console.Write("Enter disguise: ");
+                        int disguise = _program.CheckInt();
+                        tanks[i] = new MediumTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, disguise);
                         break;
                     default:
                     {
@@ -129,7 +132,7 @@ namespace WOT
                     case 1:
                         Console.WriteLine($"\nMedium tank:\n\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +
                                           $"Name: {tanks[i].Name}\nDamagePerShoot: {tanks[i].DamagePerShoot}\nNation: " +
-                                          $"{tanks[i].Nation}");
+                                          $"{tanks[i].Nation}\nDisguise: {tanks[i].Disguise}");
                         break;
                     default:
                         Console.WriteLine($"\nLight tank:\n\nHitPoints: {tanks[i].HitPoints}\nShotsPerMinute: {tanks[i].ShotsPerMinute}\n" +

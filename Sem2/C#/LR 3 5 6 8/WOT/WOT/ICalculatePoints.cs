@@ -1,15 +1,7 @@
 ﻿namespace WOT
 {
-    public interface IBattleMethods
+    public interface ICalculatePoints
     {
-        // AirSupport for light tank
-        void BattleAirSupportLightTank(ref int firstChooseTank, ref int secondChooseTank,
-            ref int firstTankHp,  ref int secondTankHp);
-
-        // Aiming for the medium tank
-        void BattleAimingMediumTank(ref int firstChooseTank, ref int secondChooseTank,
-            ref int firstTankShots, ref int secondTankShots);
-
         // counting the number of shots to kill the first tank
         void NumberShotsToKillFirstTank(Tanks tanks, ref int firstTankHp, ref int firstTankShots,
             ref int firstChooseTank, ref int secondChooseTank);
