@@ -14,12 +14,12 @@ double Rec(double p) {
 }
 
 double Iter() {
-    double p, sum;
-    sum = p = x;
+    double v, sum;
+    sum = v = x;
     n = 1;
-    while (fabs(p) > e) {
-        p *= -x*x / (float )(2 * n) / (float )(2 * n + 1);
-        sum += p;
+    while (fabs(v) > e) {
+        v *= -x * x / (float )(2 * n) / (float )(2 * n + 1);
+        sum += v;
         n++;
     }
     return sum;
