@@ -125,5 +125,12 @@ int main()
         endOpenedBracket = '\0';
     }
 
+    free(lengthOfStrings);
+
+    for(int i = 0; i < counter; i++)
+        free(arr[i]);
+    free(arr);
+
+
     return 0;
 }

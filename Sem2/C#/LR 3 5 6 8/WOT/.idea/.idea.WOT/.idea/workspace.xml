@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WOT/IAbilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/Battle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Battle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/Camo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/HeavyTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/HeavyTank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/IBattleMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/ICalculatePoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/LightTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/LightTank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/MediumTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/MediumTank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/Tank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Tank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/Tanks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Tanks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +101,8 @@
       <workItem from="1619081778023" duration="5238000" />
       <workItem from="1619101989069" duration="2385000" />
       <workItem from="1619113481552" duration="4893000" />
-      <workItem from="1619199675143" duration="4355000" />
+      <workItem from="1619199675143" duration="4405000" />
+      <workItem from="1619207541956" duration="1098000" />
     </task>
     <servers />
   </component>
