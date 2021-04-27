@@ -1,0 +1,4 @@
+﻿  LR5.c
+D:\LR\Sem2\C\LR5\LR5.c(60,23): warning C4047: '=': 'Node *' differs in levels of indirection from 'int'
+D:\LR\Sem2\C\LR5\LR5.c(73,23): warning C4047: '=': 'int' differs in levels of indirection from 'Node *'
+  LR5.vcxproj -> D:\LR\Sem2\C\LR5\Debug\LR5.exe
