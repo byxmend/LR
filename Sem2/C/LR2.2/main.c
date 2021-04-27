@@ -32,9 +32,9 @@ int main()
     printf("Enter e:");
     scanf_s("%f", &e);
 
-    printf("Rec: %f\n", Rec(x));
+    printf("Rec: %10.2f\n", Rec(x));
     printf("n1:%d\n", ++n);
-    printf("Iter:%f\n", Iter());
+    printf("Iter:%.10f\n", Iter());
     printf("n2:%d\n", n);
-    printf("Math:%f\n", sinf(x));
+    printf("Math:%.10f\n", sinf(x));
 }
