@@ -59,6 +59,9 @@ namespace WOT
                         battle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
                         break;
                     case 7:
+                        tanks.ShowComparerTanks(tanks);
+                        break;
+                    case 8:
                         Console.Clear();
                         break;
                     default:
