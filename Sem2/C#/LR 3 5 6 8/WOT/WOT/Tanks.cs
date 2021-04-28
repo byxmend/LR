@@ -39,28 +39,28 @@ namespace WOT
         }
 
         public void ShowComparerTanks(Tanks tanks)
-		{
+        {
             Console.WriteLine("\n");
 
-			if (_hpComparer.Compare(tanks[0], tanks[1]) == 1)
-			{
+            if (_hpComparer.Compare(tanks[0], tanks[1]) == 1)
+            {
                 Console.WriteLine("Heavy tank HitPoints > Medium tank hitPoints");
 
                 if (_hpComparer.Compare(tanks[0], tanks[2]) == 1)
-				{
+                {
                     Console.WriteLine("Heavy tank HitPoints > Light tank hitPoints");
                 }
-				else if (_hpComparer.Compare(tanks[0], tanks[2]) == 0)
-				{
+                else if (_hpComparer.Compare(tanks[0], tanks[2]) == 0)
+                {
                     Console.WriteLine("Heavy tank HitPoints = Light tank hitPoints");
                 }
-				else
-				{
+                else
+                {
                     Console.WriteLine("Heavy tank HitPoints < Light tank hitPoints");
                 }
-			}
-			else if (_hpComparer.Compare(tanks[0], tanks[1]) == 0)
-			{
+            }
+            else if (_hpComparer.Compare(tanks[0], tanks[1]) == 0)
+            {
                 Console.WriteLine("Heavy tank HitPoints = Medium tank hitPoints");
 
                 if (_hpComparer.Compare(tanks[0], tanks[2]) == 1)
@@ -72,12 +72,12 @@ namespace WOT
                     Console.WriteLine("Heavy tank HitPoints = Light tank hitPoints");
                 }
                 else
-				{
+                {
                     Console.WriteLine("Heavy and Medium tanks HitPoints < Light tank hitPoints");
                 }
             }
-			else
-			{
+            else
+            {
                 Console.WriteLine("Heavy tank HitPoints < Medium tank hitPoints");
 
                 if (_hpComparer.Compare(tanks[1], tanks[2]) == 1)
@@ -93,7 +93,7 @@ namespace WOT
                     Console.WriteLine("Heavy and Medium tanks HitPoints < Light tank hitPoints");
                 }
             }
-		}
+        }
 
         public void FillTanksSet(Tanks tanks)
         {
