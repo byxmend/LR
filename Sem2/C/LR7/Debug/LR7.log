@@ -1,0 +1,5 @@
+﻿  LR7.c
+D:\LR\Sem2\C\LR7\LR7.c(102,11): warning C4013: 'pushBack' undefined; assuming extern returning int
+D:\LR\Sem2\C\LR7\LR7.c(35,7): warning C4101: 'buffer': unreferenced local variable
+LR7.obj : error LNK2019: unresolved external symbol _pushBack referenced in function _main
+D:\LR\Sem2\C\LR7\Debug\LR7.exe : fatal error LNK1120: 1 unresolved externals

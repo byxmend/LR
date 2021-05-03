@@ -58,16 +58,16 @@ namespace WOT
             {
                 switch (Disguise)
                 {
-	                case > 0 and < 6:
-		                value = Disguise / 2;
-		                return value;
-	                case > 5 and < 11:
-		                value = Disguise / 3;
-		                return value;
-	                default:
-		                Console.WriteLine("Range: 1 - 10, try again");
-		                Disguise = _program.CheckInt();
-		                break;
+                    case > 0 and < 6:
+                        value = Disguise / 2;
+                        return value;
+                    case > 5 and < 11:
+                        value = Disguise / 3;
+                        return value;
+                    default:
+                        Console.WriteLine("Range: 1 - 10, try again");
+                        Disguise = _program.CheckInt();
+                        break;
                 }
             }
         }

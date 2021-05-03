@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WOT
 {
-	class HpComparer : IComparer<Tank>
-	{
+    class HpComparer : IComparer<Tank>
+    {
         public int Compare(Tank firstTank, Tank secondTank)
         {
             if (firstTank.HitPoints > secondTank.HitPoints)

@@ -1,0 +1,1 @@
+001,250,Minsk,Moscow,Gomel,Polotsk,12:00,Monday

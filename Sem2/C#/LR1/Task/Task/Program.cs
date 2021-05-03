@@ -21,7 +21,7 @@ namespace LabFirst
 				}
 			}
 		}
-			
+		
 		static void SayCard(int[] playerCards, int[] deck, int num)
 		{
 			switch (num)
@@ -187,24 +187,30 @@ namespace LabFirst
 			// the logic of the bot
 			
 			scoreTwo += deck[playerCards[scorePlayer]];
+
 			if (aceInt == 1 && deck[playerCards[scorePlayer]] == 11)
 			{
 				scoreTwo -= 10;
 			}
+
 			scoreTwo += deck[playerCards[++scorePlayer]];
+
 			if (aceInt == 1 && deck[playerCards[scorePlayer]] == 11)
 			{
 				scoreTwo -= 10;
 			}
+
 			scorePlayer++;
 
 			while (scoreTwo < 17)
 			{
 				scoreTwo += deck[playerCards[scorePlayer]];
+
 				if (aceInt == 1 && deck[playerCards[scorePlayer]] == 11)
 				{
 					scoreTwo -= 10;
 				}
+                
 				scorePlayer++;
 			}
 
