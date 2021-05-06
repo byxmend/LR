@@ -2,8 +2,8 @@
 
 namespace WOT
 {
-	class MaintainingBattle : ICalculatePoints, IAbilities
-	{
+    class MaintainingBattle : ICalculatePoints, IAbilities
+    {
         private readonly HeavyTank _heavyTank = new HeavyTank();
 
         private readonly LightTank _lightTank = new LightTank();

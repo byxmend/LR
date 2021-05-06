@@ -2,7 +2,7 @@
 
 namespace WOT
 {
-	class UnfairBattle : IBattle
+    class UnfairBattle : IBattle
     {
         private readonly ICalculatePoints calculatePoints = new MaintainingBattle();
 
