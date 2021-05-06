@@ -46,35 +46,27 @@ void print(List list)
 	}
 }
 
-void changeList(List* list) {
+void changeList(List* list)
+{
 	int i = 0, j = 0;
 
 	Node* p = list->head;
-	Node* e = list->head;
 	Node* arrayPNext[5];
-	Node* arrayNum[5];
 
 	while (p != NULL)
 	{
 		arrayPNext[i] = p;
-		arrayNum[i] = p->num;
 		p = p->pNext;
 		i++;
 	}
-
-	i--;
-
-	p = list->head;
-
-	while (p != NULL)
+	
+	for (int j = i-1; j >0; j--)
 	{
-		e = p;
-		p = arrayPNext[i];
-		p->num = arrayNum[j];
-		p = e->pNext;
-		i--;
-		j++;
+		arrayPNext[j]->pNext = arrayPNext[j - 1];
 	}
+
+	list->head = arrayPNext[i - 1];
+	arrayPNext[0]->pNext = NULL;
 }
 
 int main()

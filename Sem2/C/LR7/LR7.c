@@ -61,7 +61,6 @@ void pushBack(InformationAboutContributors* users, Node* node) {
 
 int main()
 {
-	// int counter = 0;
 	char buffer[N]; // strings from the file are stored here
 	char str[20];
 	char* next = 0;

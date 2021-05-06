@@ -8,8 +8,6 @@ namespace WOT
 
         private readonly Program _program = new();
 
-        private readonly MediumTank _mediumTank = new();
-
         private readonly HpComparer _hpComparer = new();
 
         public Tanks()
