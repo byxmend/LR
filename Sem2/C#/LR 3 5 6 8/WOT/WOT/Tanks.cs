@@ -36,7 +36,7 @@ namespace WOT
             return a;
         }
 
-        public void ShowComparerTanks(Tanks tanks)
+        public void ShowComparerTanksHp(Tanks tanks)
         {
             Console.WriteLine("\n");
 

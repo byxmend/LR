@@ -2,7 +2,6 @@
 {
     public interface ICalculatePoints
     {
-        // counting the number of shots to kill the first tank
         void NumberOfShotsToKillTank(Tanks tanks, ref int TankHp, ref int TankShots,
             ref int firstChooseTank, ref int secondChooseTank);
         

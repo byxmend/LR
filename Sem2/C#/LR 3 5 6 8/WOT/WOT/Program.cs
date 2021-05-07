@@ -18,8 +18,10 @@ namespace WOT
         {
             Program program = new Program();
             Menu menu = new Menu();
-            Battle battle = new Battle();
             Tanks tanks = new Tanks();
+
+            IBattle battle = new Battle();
+            IBattle unfairBattle = new UnfairBattle();
             
             int[] array = new int[3];
             int firstChooseTank;
@@ -59,9 +61,14 @@ namespace WOT
                         battle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
                         break;
                     case 7:
-                        tanks.ShowComparerTanks(tanks);
+                        firstChooseTank = tanks.ChooseTank();
+                        secondChooseTank = tanks.ChooseTank();
+                        unfairBattle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
                         break;
                     case 8:
+                        tanks.ShowComparerTanksHp(tanks);
+                        break;
+                    case 9:
                         Console.Clear();
                         break;
                     default:

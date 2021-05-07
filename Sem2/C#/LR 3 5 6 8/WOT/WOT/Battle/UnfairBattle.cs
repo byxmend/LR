@@ -12,7 +12,6 @@ namespace WOT
             int secondTankHp = tanks[secondChooseTank].HitPoints;
             int firstTankShots = 0;
             int secondTankShots = 0;
-
             double shotRatio1 = 0;
             double shotRatio2 = 0;
 

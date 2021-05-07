@@ -5,15 +5,18 @@ namespace WOT
     public class Menu
     {
         private readonly Program _program = new Program();
+
         private readonly HeavyTank _heavyTank = new HeavyTank();
+
         private readonly MediumTank _mediumTank = new MediumTank();
+
         private readonly LightTank _lightTank = new LightTank();
 
         public void GeneralMenu()
         {
             Console.WriteLine("\nSelect an action:\n1 - Fill tanks set\n2 - Show tanks set\n" +
                               "3 - Add standard equipment\n4 - Remove standard equipment\n5 - Add features\n" +
-                              "6 - Battle\n7 - Comparer tanks\n8 - Clear console\nOther number - Turn off");
+                              "6 - Battle\n7 - Unfair battle\n8 - Comparer tanks hitpoints\n9 - Clear console\nOther number - Turn off");
         }
 
         public void MenuAddFeatures(Tanks tanks, int[] array, int index)
