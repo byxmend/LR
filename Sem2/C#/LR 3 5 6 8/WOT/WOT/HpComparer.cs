@@ -2,13 +2,13 @@
 
 namespace WOT
 {
-    class HpComparer : IComparer<int>
+    class HpComparer : IComparer<Tank>
     {
-        public int Compare(int firstTankHp, int secondTankHp)
+        public int Compare(Tank firstTank, Tank secondTank)
         {
-            if (firstTankHp > secondTankHp)
+            if (firstTank.HitPoints > secondTank.HitPoints)
                 return 1;
-            else if (firstTankHp == secondTankHp)
+            else if (firstTank.HitPoints == secondTank.HitPoints)
                 return 0;
             else
                 return -1;

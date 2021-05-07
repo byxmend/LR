@@ -66,7 +66,7 @@ namespace WOT
                         unfairBattle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
                         break;
                     case 8:
-                        tanks.ShowComparerTanksHp(tanks, array);
+                        tanks.ShowComparerTanksHp(tanks);
                         break;
                     case 9:
                         Console.Clear();

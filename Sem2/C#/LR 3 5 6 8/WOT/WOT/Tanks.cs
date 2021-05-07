@@ -33,17 +33,14 @@ namespace WOT
             return a;
         }
 
-        public void ShowComparerTanksHp(Tanks tanks, int[] array)
+        public void ShowComparerTanksHp(Tanks tanks)
         {
+            Array.Sort(tanks._tanksSet, new HpComparer());
+
             Console.WriteLine("\n");
-            
-            for (int i = 0; i < 3; i++)
-                array[i] = tanks[i].HitPoints;
-
-            Array.Sort(array, new HpComparer());
 
             for (int i = 0; i < 3; i++)
-                Console.WriteLine(array[i]);
+                Console.WriteLine(tanks[i].HitPoints);
         }
 
         public void FillTanksSet(Tanks tanks)
