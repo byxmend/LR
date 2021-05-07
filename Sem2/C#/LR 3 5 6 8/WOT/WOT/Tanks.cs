@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace WOT
 {
@@ -7,8 +8,6 @@ namespace WOT
         private readonly Tank[] _tanksSet;
 
         private readonly Program _program = new();
-
-        private readonly HpComparer _hpComparer = new();
 
         public Tanks()
         {
@@ -26,9 +25,7 @@ namespace WOT
             Console.WriteLine("\nChoose number of the tank:");
 
             for (int i = 0; i < 3; i++)
-            {
                 Console.Write(i + " ");
-            }
 
             Console.WriteLine(": ");
 
@@ -36,61 +33,17 @@ namespace WOT
             return a;
         }
 
-        public void ShowComparerTanksHp(Tanks tanks)
+        public void ShowComparerTanksHp(Tanks tanks, int[] array)
         {
             Console.WriteLine("\n");
+            
+            for (int i = 0; i < 3; i++)
+                array[i] = tanks[i].HitPoints;
 
-            if (_hpComparer.Compare(tanks[0], tanks[1]) == 1)
-            {
-                Console.WriteLine("Heavy tank HitPoints > Medium tank hitPoints");
+            Array.Sort(array, new HpComparer());
 
-                if (_hpComparer.Compare(tanks[0], tanks[2]) == 1)
-                {
-                    Console.WriteLine("Heavy tank HitPoints > Light tank hitPoints");
-                }
-                else if (_hpComparer.Compare(tanks[0], tanks[2]) == 0)
-                {
-                    Console.WriteLine("Heavy tank HitPoints = Light tank hitPoints");
-                }
-                else
-                {
-                    Console.WriteLine("Heavy tank HitPoints < Light tank hitPoints");
-                }
-            }
-            else if (_hpComparer.Compare(tanks[0], tanks[1]) == 0)
-            {
-                Console.WriteLine("Heavy tank HitPoints = Medium tank hitPoints");
-
-                if (_hpComparer.Compare(tanks[0], tanks[2]) == 1)
-                {
-                    Console.WriteLine("Heavy tank HitPoints > Light tank hitPoints");
-                }
-                else if (_hpComparer.Compare(tanks[0], tanks[2]) == 0)
-                {
-                    Console.WriteLine("Heavy tank HitPoints = Light tank hitPoints");
-                }
-                else
-                {
-                    Console.WriteLine("Heavy and Medium tanks HitPoints < Light tank hitPoints");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Heavy tank HitPoints < Medium tank hitPoints");
-
-                if (_hpComparer.Compare(tanks[1], tanks[2]) == 1)
-                {
-                    Console.WriteLine("Medium tank HitPoints > Light tank hitPoints");
-                }
-                else if (_hpComparer.Compare(tanks[1], tanks[2]) == 0)
-                {
-                    Console.WriteLine("Medium tank HitPoints = Light tank hitPoints");
-                }
-                else
-                {
-                    Console.WriteLine("Heavy and Medium tanks HitPoints < Light tank hitPoints");
-                }
-            }
+            for (int i = 0; i < 3; i++)
+                Console.WriteLine(array[i]);
         }
 
         public void FillTanksSet(Tanks tanks)

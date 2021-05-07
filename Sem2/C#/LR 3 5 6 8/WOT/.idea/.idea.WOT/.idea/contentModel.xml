@@ -7,13 +7,18 @@
     <e p="D:\LR\Sem2\C#\LR 3 5 6 8\WOT" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="WOT" t="IncludeRecursive">
-        <e p="Battle.cs" t="Include" />
+        <e p="Battle" t="Include">
+          <e p="Battle.cs" t="Include" />
+          <e p="MaintainingBattle.cs" t="Include" />
+          <e p="UnfairBattle.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
-        <e p="HeavyTank.cs" t="Include" />
-        <e p="IAbilities.cs" t="Include" />
-        <e p="ICalculatePoints.cs" t="Include" />
-        <e p="LightTank.cs" t="Include" />
-        <e p="MediumTank.cs" t="Include" />
+        <e p="HpComparer.cs" t="Include" />
+        <e p="IBattle" t="Include">
+          <e p="IAbilities.cs" t="Include" />
+          <e p="IBattle.cs" t="Include" />
+          <e p="ICalculatePoints.cs" t="Include" />
+        </e>
         <e p="Menu.cs" t="Include" />
         <e p="Nationality.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -26,6 +31,11 @@
         <e p="Program.cs" t="Include" />
         <e p="Tank.cs" t="Include" />
         <e p="Tanks.cs" t="Include" />
+        <e p="TypesOfTanks" t="Include">
+          <e p="HeavyTank.cs" t="Include" />
+          <e p="LightTank.cs" t="Include" />
+          <e p="MediumTank.cs" t="Include" />
+        </e>
         <e p="WOT.csproj" t="IncludeRecursive" />
       </e>
       <e p="WOT.sln" t="IncludeFlat" />

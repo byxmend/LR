@@ -22,7 +22,7 @@ namespace WOT
 
             IBattle battle = new Battle();
             IBattle unfairBattle = new UnfairBattle();
-            
+
             int[] array = new int[3];
             int firstChooseTank;
             int secondChooseTank;
@@ -66,7 +66,7 @@ namespace WOT
                         unfairBattle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
                         break;
                     case 8:
-                        tanks.ShowComparerTanksHp(tanks);
+                        tanks.ShowComparerTanksHp(tanks, array);
                         break;
                     case 9:
                         Console.Clear();

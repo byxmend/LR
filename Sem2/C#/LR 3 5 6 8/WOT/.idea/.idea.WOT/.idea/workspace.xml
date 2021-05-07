@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/WOT/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WOT/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/HpComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/HpComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Tanks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Tanks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/WOT.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/bin/Debug/net5.0/ref/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/ref/WOT.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/WOT.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/WOT.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +50,14 @@
       <option value="$PROJECT_DIR$/WOT/IAbilities.cs" />
       <option value="$PROJECT_DIR$/WOT/ICalculatePoints.cs" />
       <option value="$PROJECT_DIR$/WOT/Battle.cs" />
-      <option value="$PROJECT_DIR$/WOT/Program.cs" />
       <option value="$PROJECT_DIR$/WOT/Camo.cs" />
       <option value="$PROJECT_DIR$/WOT/MediumTank.cs" />
-      <option value="$PROJECT_DIR$/WOT/Tank.cs" />
       <option value="$PROJECT_DIR$/WOT/HeavyTank.cs" />
       <option value="$PROJECT_DIR$/WOT/LightTank.cs" />
+      <option value="$PROJECT_DIR$/WOT/Tank.cs" />
+      <option value="$PROJECT_DIR$/WOT/Program.cs" />
       <option value="$PROJECT_DIR$/WOT/Tanks.cs" />
+      <option value="$PROJECT_DIR$/WOT/HpComparer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r7yJDyi14P1ocCehbYsTZtoyEK" />
@@ -103,6 +120,7 @@
       <workItem from="1619113481552" duration="4893000" />
       <workItem from="1619199675143" duration="4405000" />
       <workItem from="1619207541956" duration="1098000" />
+      <workItem from="1620412905999" duration="3372000" />
     </task>
     <servers />
   </component>
