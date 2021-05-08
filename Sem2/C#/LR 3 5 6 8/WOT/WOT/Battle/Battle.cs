@@ -4,9 +4,9 @@ namespace WOT
 {
     public class Battle : IBattle
     {
-        private readonly ICalculatePoints calculatePoints = new MaintainingBattle();
+        private readonly ICalculatePoints _calculatePoints = new MaintainingBattle();
 
-        private readonly IAbilities abilities = new MaintainingBattle();
+        private readonly IAbilities _abilities = new MaintainingBattle();
 
         public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank)
         {
@@ -21,20 +21,20 @@ namespace WOT
             {
                 Console.WriteLine("\nBattle!\n");
 
-                abilities.BattleAirSupportLightTank(ref firstChooseTank, ref secondChooseTank, ref firstTankHp, ref secondTankHp);
+                _abilities.BattleAirSupportLightTank(ref firstChooseTank, ref secondChooseTank, ref firstTankHp, ref secondTankHp);
 
-                abilities.BattleAimingMediumTank(ref firstChooseTank, ref secondChooseTank, ref firstTankShots, ref secondTankShots);
+                _abilities.BattleAimingMediumTank(ref firstChooseTank, ref secondChooseTank, ref firstTankShots, ref secondTankShots);
 
                 // first tank
-                calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
+                _calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
 
                 // second tank
-                calculatePoints.NumberOfShotsToKillTank(tanks, ref secondTankHp, ref secondTankShots, ref firstChooseTank, ref secondChooseTank);
+                _calculatePoints.NumberOfShotsToKillTank(tanks, ref secondTankHp, ref secondTankShots, ref firstChooseTank, ref secondChooseTank);
 
-                calculatePoints.CalculateShotsRatio(tanks, ref secondTankShots, ref secondChooseTank, ref shotRatio1, ref shotRatio2, ref firstTankShots,
+                _calculatePoints.CalculateShotsRatio(tanks, ref secondTankShots, ref secondChooseTank, ref shotRatio1, ref shotRatio2, ref firstTankShots,
                     ref firstChooseTank);
 
-                calculatePoints.DeterminingTheWinner(ref shotRatio1, ref shotRatio2);
+                _calculatePoints.DeterminingTheWinner(ref shotRatio1, ref shotRatio2);
             }
             else
             {

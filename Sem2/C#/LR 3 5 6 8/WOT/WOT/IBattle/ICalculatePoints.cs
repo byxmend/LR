@@ -2,7 +2,7 @@
 {
     public interface ICalculatePoints
     {
-        void NumberOfShotsToKillTank(Tanks tanks, ref int TankHp, ref int TankShots,
+        void NumberOfShotsToKillTank(Tanks tanks, ref int tankHp, ref int tankShots,
             ref int firstChooseTank, ref int secondChooseTank);
         
         void CalculateShotsRatio(Tanks tanks, ref int secondTankShots, ref int secondChooseTank,

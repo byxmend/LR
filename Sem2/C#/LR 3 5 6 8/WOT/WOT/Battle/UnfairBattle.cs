@@ -4,7 +4,7 @@ namespace WOT
 {
     class UnfairBattle : IBattle
     {
-        private readonly ICalculatePoints calculatePoints = new MaintainingBattle();
+        private readonly ICalculatePoints _calculatePoints = new MaintainingBattle();
 
         public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank)
         {
@@ -17,18 +17,18 @@ namespace WOT
 
             if (tanks[firstChooseTank] != tanks[secondChooseTank])
             {
-                Console.WriteLine("\nUnhonestly battle!\n");
+                Console.WriteLine("\nUnfair battle!\n");
 
                 // first tank
-                calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
+                _calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
 
                 // second tank
-                calculatePoints.NumberOfShotsToKillTank(tanks, ref secondTankHp, ref secondTankShots, ref firstChooseTank, ref secondChooseTank);
+                _calculatePoints.NumberOfShotsToKillTank(tanks, ref secondTankHp, ref secondTankShots, ref firstChooseTank, ref secondChooseTank);
 
-                calculatePoints.CalculateShotsRatio(tanks, ref secondTankShots, ref secondChooseTank, ref shotRatio1, ref shotRatio2, ref firstTankShots,
+                _calculatePoints.CalculateShotsRatio(tanks, ref secondTankShots, ref secondChooseTank, ref shotRatio1, ref shotRatio2, ref firstTankShots,
                     ref firstChooseTank);
 
-                calculatePoints.DeterminingTheWinner(ref shotRatio1, ref shotRatio2);
+                _calculatePoints.DeterminingTheWinner(ref shotRatio1, ref shotRatio2);
             }
             else
             {
