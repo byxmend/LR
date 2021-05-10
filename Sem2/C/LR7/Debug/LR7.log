@@ -1,7 +1,8 @@
 ﻿  LR7.c
-D:\LR\Sem2\C\LR7\LR7.c(247,24): warning C4133: '=': incompatible types - from 'char *' to 'Node *'
-D:\LR\Sem2\C\LR7\LR7.c(249,32): warning C4133: 'function': incompatible types - from 'Node *' to 'const char *'
-D:\LR\Sem2\C\LR7\LR7.c(515,17): warning C4013: 'gets' undefined; assuming extern returning int
-D:\LR\Sem2\C\LR7\LR7.c(459,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
-D:\LR\Sem2\C\LR7\LR7.c(459,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+D:\LR\Sem2\C\LR7\LR7.c(251,24): warning C4133: '=': incompatible types - from 'char *' to 'Node *'
+D:\LR\Sem2\C\LR7\LR7.c(253,32): warning C4133: 'function': incompatible types - from 'Node *' to 'const char *'
+D:\LR\Sem2\C\LR7\LR7.c(451,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
+D:\LR\Sem2\C\LR7\LR7.c(451,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+D:\LR\Sem2\C\LR7\LR7.c(492,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
+D:\LR\Sem2\C\LR7\LR7.c(492,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
   LR7.vcxproj -> D:\LR\Sem2\C\LR7\Debug\LR7.exe

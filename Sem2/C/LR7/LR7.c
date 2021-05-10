@@ -27,6 +27,15 @@ typedef struct informationAboutSchedule
     Node* top;
 } InformationAboutSchedule; 
 
+char* concat(const char* s1, const char* s2)
+{
+    char* result = malloc(strlen(s1) + strlen(s2) + 1);
+    strcpy(result, s1);
+    strcat(result, s2);
+
+    return result;
+}
+
 void pushBack(InformationAboutSchedule* schedules, Node* node)
 {
     node->pNext = NULL;
@@ -194,7 +203,7 @@ void findByDate(InformationAboutSchedule schedules, char* str)
 
     while (p != NULL)
     {
-        if (strcmp(str, p->date) == 0)
+        if (strcmp(str, p->date) == 0 || strcmp(concat(str, "\n"), p->date) == 0)
         {
             printElementOfList(schedules, counter);
         }
@@ -209,13 +218,8 @@ void numberOfAvailableSeats(InformationAboutSchedule schedules)
     Node* p = schedules.head;
     int numbOfSeats;
 
-    while (1)
+    while (p != NULL)
     {
-        if (p->pNext == NULL)
-        {
-            break;
-        }
-
         numbOfSeats = p->typeOfPlane - p->numberOfTickets;
 
         printf("\n\nFlight number: %d", p->flightNumber);
@@ -284,9 +288,9 @@ void findNearestFlight(InformationAboutSchedule schedules, char* strStartLocatio
         printf("%d:", firstDayNumber);
 
     if (firstMonthNumber < 10)
-        printf("0%d", firstMonthNumber);
+        printf("0%d\n", firstMonthNumber);
     else
-        printf("%d", firstMonthNumber);
+        printf("%d\n", firstMonthNumber);
 }
 
 void printAllTickets(InformationAboutSchedule schedules)
@@ -300,7 +304,7 @@ void printAllTickets(InformationAboutSchedule schedules)
         {
             printf("\nTicket number #%d", index);
             printElementOfList(schedules, counter);
-            printf("8. Number of tickets: %d", p->numberOfTickets);
+            printf("8. Number of tickets: %d\n", p->numberOfTickets);
 
             index++;
         }
@@ -314,13 +318,14 @@ void bookATicket(InformationAboutSchedule* schedules, char* strStartLocation,
     char* strFinishLocation, char* date)
 {
     Node* p = schedules->head;
-    int counter = 0, numberOfDates = 1, selectedNumber;
+    int counter = 0, numberOfDates = 1, selectedNumber = 0;
+    char str[20] = { 0 };
 
     while (p != NULL)
     {
         if (strcmp(strStartLocation, p->startLocation) == 0 &&
             strcmp(strFinishLocation, p->finishLocation) == 0 &&
-            strcmp(date, p->date) == 0)
+            (strcmp(date, p->date) == 0 || strcmp(concat(date, "\n"), p->date) == 0))
         {
             printf("\n%d. Time: %s", numberOfDates, p->time);
             numberOfDates++;
@@ -331,47 +336,35 @@ void bookATicket(InformationAboutSchedule* schedules, char* strStartLocation,
     }
 
     if (numberOfDates == 1)
-    {
         printf("\nThere are no flights on this day");
-    }
     else
     {
-        printf("\n\nChoose the number: ");
-        scanf_s("%d", &selectedNumber);
-
-        if (selectedNumber < 1 || selectedNumber > (numberOfDates - 1))
-        {
-            printf("\nError to book a ticket");
-        }
+        printf("\n\nEnter time: ");
+        scanf(" %s", &str);
 
         p = schedules->head;
         counter = 0;
-        numberOfDates = 1;
 
-        while (p != NULL && numberOfDates != (selectedNumber + 1))
+        while (p != NULL)
         {
             if (strcmp(strStartLocation, p->startLocation) == 0 &&
                 strcmp(strFinishLocation, p->finishLocation) == 0 &&
-                strcmp(date, p->date) == 0)
+                (strcmp(date, p->date) == 0 ||
+                strcmp(concat(date, "\n"), p->date) == 0) &&
+                strcmp(str, p->time) == 0)
             {
-                numberOfDates++;
-            }
-
-            if (numberOfDates == (selectedNumber + 1))
-            {
-                if (p->numberOfTickets < p->typeOfPlane)
-                {
-                    p->numberOfTickets++;
-                    printf("Ticket ordered successfully!");
-                }
-                else
-                {
-                    printf("All seats are reserved");
-                }
+                p->numberOfTickets += 1;
+                counter++;
+                printf("Ticket ordered successfully!");
+                break;
             }
 
             p = p->pNext;
-            counter++;
+        }
+
+        if (counter == 0)
+        {
+            printf("Error!");
         }
     }
 }
@@ -388,14 +381,13 @@ void handOverATicket(InformationAboutSchedule* schedules, InformationAboutSchedu
     while (p != NULL)
     {
         if (p->numberOfTickets > 0)
-        {
             index++;
-        }
 
         if (selectedNumber == (index - 1))
         {
             p->numberOfTickets--;
-            printf("Ticket passed successfull!");
+            printf("\nTicket passed successfull!");
+            break;
         }
 
         p = p->pNext;
@@ -404,7 +396,8 @@ void handOverATicket(InformationAboutSchedule* schedules, InformationAboutSchedu
 
 void menu()
 {
-    printf("\n1 - Find (flightNumber)\n");
+    printf("\n\n0 - Add element to the list\n");
+    printf("1 - Find (flightNumber)\n");
     printf("2 - Find (typeOfPlane)\n");
     printf("3 - Find (startLocation)\n");
     printf("4 - Find (finishLocation)\n");
@@ -416,19 +409,22 @@ void menu()
     printf("10 - Hand over your ticket\n");
     printf("11 - Number of available seats\n");
     printf("12 - Print ticket\n");
-    printf("Other - Save in data in the file and exit\n");
+    printf("Other - Save in data to the file and exit\n");
 }
 
 int main()
 {
-    char stringFromTheFile[200];
-    char stringToFindSomething[20];
-    char secondStringToFindSomething[20];
-    char thirdStringToFindSomething[20];
+    char stringFromTheFile[200] = { 0 };
+    char stringToFindSomething[20] = { 0 };
+    char secondStringToFindSomething[20] = { 0 };
+    char thirdStringToFindSomething[20] = { 0 };
+    char convertStr[255] = { 0 };
+    char fullStr[255] = { 0 };
     char* next = 0;
-    int countFildsOFStructure = 0, numbMenu, numbToFindSomething;
+    int countFildsOFStructure = 0, numbMenu = 0, numbToFindSomething = 0;
 
     InformationAboutSchedule schedules = { NULL, NULL, NULL };
+    Node* fileWriteOperation;
 
     FILE* filePrint;
     FILE* fileWrite;
@@ -437,17 +433,13 @@ int main()
     int errOpenFilePrint = fopen_s(&filePrint, "filePrint.txt", "r");
 
     if (errOpenFilePrint != 0)
-    {
         exit(1);
-    }
 
     // open fileWrite
     int errOpenFileWrite = fopen_s(&fileWrite, "fileWrite.txt", "w");
 
     if (errOpenFileWrite != 0)
-    {
         exit(1);
-    }
 
     // Fill the list from filePrint
     while (!feof(filePrint))
@@ -491,59 +483,102 @@ int main()
 
         pushBack(&schedules, &currant);
     }
-
+    
     // algorithm
     menu();
 
     while (1)
     {
+        Node currant = { 0, 0, "", "", "", "", "", NULL, NULL };
+
+        printf("\nChoose operation: ");
         scanf_s("%d", &numbMenu);
 
         switch (numbMenu)
         {
+        case 0:
+            printf("\nEnter flight number: ");
+            scanf_s("%d", &numbToFindSomething);
+            currant.flightNumber = numbToFindSomething;
+
+            printf("\nEnter type of plane: ");
+            scanf_s("%d", &numbToFindSomething);
+            currant.typeOfPlane = numbToFindSomething;
+
+            printf("\nEnter start location: ");
+            scanf(" %s", &stringToFindSomething);
+            strcat(currant.startLocation, stringToFindSomething);
+
+            printf("\nEnter finish location: ");
+            scanf(" %s", &stringToFindSomething);
+            strcat(currant.finishLocation, stringToFindSomething);
+
+            printf("\nEnter place: ");
+            scanf(" %s", &stringToFindSomething);
+            strcat(currant.place, stringToFindSomething);
+
+            printf("\nEnter time: ");
+            scanf(" %s", &stringToFindSomething);
+            strcat(currant.time, stringToFindSomething);
+            
+            printf("\nEnter date: ");
+            scanf(" %s", &stringToFindSomething);
+            strcat(currant.date, stringToFindSomething);
+
+            pushBack(&schedules, &currant);
+            break;
         case 1:
             numbToFindSomething = 0;
+            printf("\nEnter flight number: ");
             scanf_s("%d", &numbToFindSomething);
             findByFlightNumber(schedules, numbToFindSomething);
             break;
         case 2:
             numbToFindSomething = 0;
+            printf("\nEnter type of plane: ");
             scanf_s("%d", &numbToFindSomething);
             findByTypeOfPlane(schedules, numbToFindSomething);
             break;
         case 3:
-            gets(stringToFindSomething);
+            printf("\nEnter start location: ");
+            scanf(" %s", &stringToFindSomething);
             findByStartLocation(schedules, stringToFindSomething);
             break;
         case 4:
-            gets(stringToFindSomething);
+            printf("\nEnter finish location: ");
+            scanf(" %s", &stringToFindSomething);
             findByFinishLocation(schedules, stringToFindSomething);
             break;
         case 5:
-            gets(stringToFindSomething);
+            printf("\nEnter place: ");
+            scanf(" %s", &stringToFindSomething);
             findByPlace(schedules, stringToFindSomething);
             break;
         case 6:
-            gets(stringToFindSomething);
+            printf("\nEnter time: ");
+            scanf(" %s", &stringToFindSomething);
             findByTime(schedules, stringToFindSomething);
             break;
         case 7:
-            // TODO: (+ "\n")
-            gets(stringToFindSomething);
-            //
+            printf("\nEnter date: ");
+            scanf(" %s", &stringToFindSomething);
             findByDate(schedules, stringToFindSomething);
             break;
         case 8:
-            // TODO:
-            gets(stringToFindSomething);
-            gets(secondStringToFindSomething);
+            printf("\nEnter start location: ");
+            scanf(" %s", &stringToFindSomething);
+            printf("\nEnter finish location: ");
+            scanf(" %s", &secondStringToFindSomething);
             findNearestFlight(schedules, stringToFindSomething, secondStringToFindSomething);
             break;
         case 9:
-            gets(stringToFindSomething);
-            gets(secondStringToFindSomething);
-            gets(thirdStringToFindSomething);
-            bookATicket(&schedules, "Paris", "Munich", "05.06\n");
+            printf("\nEnter start location: ");
+            scanf(" %s", &stringToFindSomething);
+            printf("\nEnter finish location: ");
+            scanf(" %s", &secondStringToFindSomething);
+            printf("\nEnter date: ");
+            scanf(" %s", &thirdStringToFindSomething);
+            bookATicket(&schedules, stringToFindSomething, secondStringToFindSomething, thirdStringToFindSomething);
             break;
         case 10:
             handOverATicket(&schedules, schedules);
@@ -555,12 +590,48 @@ int main()
             printAllTickets(schedules);
             break;
         default:
+            // write the list to a file
+            fileWriteOperation = schedules.head;
+
+            while (fileWriteOperation != NULL)
+            {
+                strcpy(fullStr, "");
+                strcpy(convertStr, "");
+
+                _itoa(fileWriteOperation->flightNumber, convertStr, 10);
+                strcat(fullStr, convertStr);
+                strcat(fullStr, ",");
+
+                strcpy(convertStr, "");
+                _itoa(fileWriteOperation->typeOfPlane, convertStr, 10);
+                strcat(fullStr, convertStr);
+                strcat(fullStr, ",");
+
+                strcat(fullStr, fileWriteOperation->startLocation);
+                strcat(fullStr, ",");
+
+                strcat(fullStr, fileWriteOperation->finishLocation);
+                strcat(fullStr, ",");
+
+                strcat(fullStr, fileWriteOperation->place);
+                strcat(fullStr, ",");
+
+                strcat(fullStr, fileWriteOperation->time);
+                strcat(fullStr, ",");
+
+                strcat(fullStr, fileWriteOperation->date);
+
+                fprintf(fileWrite, fullStr);
+
+                fileWriteOperation = fileWriteOperation->pNext;
+            }
+
+            fclose(filePrint);
+            fclose(fileWrite);
 
             return 0;
         }
+
+        menu();
     }
 }
-
-// TODO: close files
-// TODO: clear dynamic memory
-// TODO: add (\n)
