@@ -1,0 +1,13 @@
+D:\LR\Sem2\C#\LR7\bin\Debug\netcoreapp3.1\LR7.exe
+D:\LR\Sem2\C#\LR7\bin\Debug\netcoreapp3.1\LR7.deps.json
+D:\LR\Sem2\C#\LR7\bin\Debug\netcoreapp3.1\LR7.runtimeconfig.json
+D:\LR\Sem2\C#\LR7\bin\Debug\netcoreapp3.1\LR7.runtimeconfig.dev.json
+D:\LR\Sem2\C#\LR7\bin\Debug\netcoreapp3.1\LR7.dll
+D:\LR\Sem2\C#\LR7\bin\Debug\netcoreapp3.1\LR7.pdb
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.csprojAssemblyReference.cache
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.AssemblyInfoInputs.cache
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.AssemblyInfo.cs
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.csproj.CoreCompileInputs.cache
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.dll
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.pdb
+D:\LR\Sem2\C#\LR7\obj\Debug\netcoreapp3.1\LR7.genruntimeconfig.cache
