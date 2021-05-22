@@ -8,7 +8,7 @@ namespace WOT
 
         private readonly IAbilities _abilities = new MaintainingBattle();
 
-        public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank)
+        public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank, Program.CheckNumberInteger checkNumberInteger)
         {
             int firstTankHp = tanks[firstChooseTank].HitPoints;
             int secondTankHp = tanks[secondChooseTank].HitPoints;
@@ -23,7 +23,7 @@ namespace WOT
 
                 _abilities.BattleAirSupportLightTank(ref firstChooseTank, ref secondChooseTank, ref firstTankHp, ref secondTankHp);
 
-                _abilities.BattleAimingMediumTank(ref firstChooseTank, ref secondChooseTank, ref firstTankShots, ref secondTankShots);
+                _abilities.BattleAimingMediumTank(ref firstChooseTank, ref secondChooseTank, ref firstTankShots, ref secondTankShots, checkNumberInteger);
 
                 // first tank
                 _calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
