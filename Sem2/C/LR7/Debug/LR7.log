@@ -1,10 +1,8 @@
 ﻿  LR7.c
-D:\LR\Sem2\C\LR7\LR7.c(251,24): warning C4133: '=': incompatible types - from 'char *' to 'Node *'
-D:\LR\Sem2\C\LR7\LR7.c(253,32): warning C4133: 'function': incompatible types - from 'Node *' to 'const char *'
-D:\LR\Sem2\C\LR7\LR7.c(423,17): warning C4022: 'free': pointer mismatch for actual parameter 1
-D:\LR\Sem2\C\LR7\LR7.c(424,17): warning C4022: 'free': pointer mismatch for actual parameter 1
-D:\LR\Sem2\C\LR7\LR7.c(470,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
-D:\LR\Sem2\C\LR7\LR7.c(470,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
-D:\LR\Sem2\C\LR7\LR7.c(511,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
-D:\LR\Sem2\C\LR7\LR7.c(511,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+D:\LR\Sem2\C\LR7\LR7.c(255,24): warning C4133: '=': incompatible types - from 'char *' to 'Node *'
+D:\LR\Sem2\C\LR7\LR7.c(257,32): warning C4133: 'function': incompatible types - from 'Node *' to 'const char *'
+D:\LR\Sem2\C\LR7\LR7.c(469,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
+D:\LR\Sem2\C\LR7\LR7.c(469,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
+D:\LR\Sem2\C\LR7\LR7.c(510,1): warning C4047: 'initializing': 'int' differs in levels of indirection from 'char [1]'
+D:\LR\Sem2\C\LR7\LR7.c(510,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'void *'
   LR7.vcxproj -> D:\LR\Sem2\C\LR7\Debug\LR7.exe

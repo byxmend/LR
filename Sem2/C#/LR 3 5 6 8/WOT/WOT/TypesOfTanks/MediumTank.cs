@@ -22,7 +22,7 @@ namespace WOT
         
         public MediumTank() { }
         
-        private readonly Program _program = new Program();
+        private readonly Menu _menu = new Menu();
 
         public override void AddEquip(Tanks tanks, int index)
         {
@@ -66,7 +66,7 @@ namespace WOT
                         return value;
                     default:
                         Console.WriteLine("Range: 1 - 10, try again");
-                        Disguise = _program.CheckInt();
+                        Disguise = _menu.MenuCheckInt();
                         break;
                 }
             }

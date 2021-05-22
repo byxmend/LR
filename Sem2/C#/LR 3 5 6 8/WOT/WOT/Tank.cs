@@ -8,7 +8,6 @@
         public string Name { get; protected init; }
         public bool Equipment { get; set; }
         public Nationality Nation { get; protected init; }
-        
         public abstract int ArmorRatio { get; set; }
         public abstract int DamageAirSupport { get; set; }
         public abstract int Disguise { get; set; }

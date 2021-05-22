@@ -203,14 +203,18 @@ void findByDate(InformationAboutSchedule schedules, char* str)
 
     while (p != NULL)
     {
-        if (strcmp(str, p->date) == 0 || strcmp(concat(str, "\n"), p->date) == 0)
+        char* result = concat(str, "\n");
+
+        if (strcmp(str, p->date) == 0 || strcmp(result, p->date) == 0)
         {
             printElementOfList(schedules, counter);
         }
 
         p = p->pNext;
         counter++;
+        free(result);
     }
+
 }
 
 void numberOfAvailableSeats(InformationAboutSchedule schedules)
@@ -412,6 +416,7 @@ void menu()
     printf("Other - Save in data to the file and exit\n");
 }
 
+
 void freeList(InformationAboutSchedule* schedules)
 {
     Node* current = schedules->head;
@@ -420,16 +425,10 @@ void freeList(InformationAboutSchedule* schedules)
     {
         Node* tmp = current;
         current = current->pNext;
-        free(tmp->flightNumber);
-        free(tmp->typeOfPlane);
-        free(tmp->startLocation);
-        free(tmp->finishLocation);
-        free(tmp->place);
-        free(tmp->time);
-        free(tmp->date);
         free(tmp);
     }
 }
+
 
 int main()
 {
@@ -645,11 +644,11 @@ int main()
                 fileWriteOperation = fileWriteOperation->pNext;
             }
 
-            // clear memory
-            freeList(&schedules);
-
             fclose(filePrint);
             fclose(fileWrite);
+
+            // clear memory
+            freeList(&schedules);
 
             return 0;
         }

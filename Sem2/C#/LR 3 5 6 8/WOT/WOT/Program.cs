@@ -4,19 +4,8 @@ namespace WOT
 {
     class Program
     {
-        public int CheckInt()
-        {
-            int a;
-            while (!int.TryParse(Console.ReadLine(), out a))
-            {
-                Console.Write("Invalid data, please try again: ");
-            }
-            return a;
-        }
-        
         static void Main(string[] args)
         {
-            Program program = new Program();
             Menu menu = new Menu();
             Tanks tanks = new Tanks();
 
@@ -24,8 +13,7 @@ namespace WOT
             IBattle unfairBattle = new UnfairBattle();
 
             int[] array = new int[3];
-            int firstChooseTank;
-            int secondChooseTank;
+            int firstChooseTank, secondChooseTank;
             int index;
             
             tanks.FillTanksSet(tanks);
@@ -35,7 +23,7 @@ namespace WOT
             {
                 menu.GeneralMenu();
 
-                switch (program.CheckInt())
+                switch (menu.MenuCheckInt())
                 {
                     case 1:
                         tanks.FillTanksSet(tanks);

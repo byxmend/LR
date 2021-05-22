@@ -1,6 +1,6 @@
 ﻿  LR6.c
 D:\LR\Sem2\C\LR6\LR6.c(58): warning C4715: 'searchPrev': not all control paths return a value
 D:\LR\Sem2\C\LR6\LR6.c(36): warning C4715: 'searchNode': not all control paths return a value
-D:\LR\Sem2\C\LR6\LR6.c(74): warning C4715: 'findMax': not all control paths return a value
 D:\LR\Sem2\C\LR6\LR6.c(66): warning C4715: 'findMin': not all control paths return a value
+D:\LR\Sem2\C\LR6\LR6.c(74): warning C4715: 'findMax': not all control paths return a value
   LR6.vcxproj -> D:\LR\Sem2\C\LR6\Debug\LR6.exe

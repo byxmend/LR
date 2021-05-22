@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 
 namespace WOT
 {
@@ -7,7 +6,7 @@ namespace WOT
     {
         private readonly Tank[] _tanksSet;
 
-        private readonly Program _program = new();
+        private readonly Menu _menu = new Menu();
 
         public Tanks()
         {
@@ -25,12 +24,14 @@ namespace WOT
             Console.WriteLine("\nChoose number of the tank:");
 
             for (int i = 0; i < 3; i++)
+            {
                 Console.Write(i + " ");
+            }
 
             Console.WriteLine(": ");
 
-            int a = _program.CheckInt();
-            return a;
+            int num = _menu.MenuCheckInt();
+            return num;
         }
 
         public void ShowComparerTanksHp(Tanks tanks)
@@ -68,15 +69,15 @@ namespace WOT
                 }
 
                 Console.Write("\nEnter the hit points: ");
-                hitPoints = _program.CheckInt();
+                hitPoints = _menu.MenuCheckInt();
                 Console.Write("Enter the number of shots fired per minute: ");
-                shotsPerMinute = _program.CheckInt();
+                shotsPerMinute = _menu.MenuCheckInt();
                 Console.Write("Enter the name: ");
                 name = Console.ReadLine();
                 Console.Write("Enter the damage per shoot: ");
-                damagePerShoot = _program.CheckInt();
+                damagePerShoot = _menu.MenuCheckInt();
                 Console.WriteLine("Chose nation:\n1 - Germany\n2 - Russia\n3 - France\nOther - Multinational");
-                nationInt = _program.CheckInt();
+                nationInt = _menu.MenuCheckInt();
 
                 switch (nationInt)
                 {
@@ -99,21 +100,21 @@ namespace WOT
                     case 0:
                     {
                         Console.Write("Enter the armor ratio: ");
-                        int armorRatio = _program.CheckInt();
+                        int armorRatio = _menu.MenuCheckInt();
                         tanks[i] = new HeavyTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, armorRatio);
                         break;
                     }
                     case 1:
                         Console.Write("Enter disguise: ");
-                        int disguise = _program.CheckInt();
+                        int disguise = _menu.MenuCheckInt();
                         tanks[i] = new MediumTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, disguise);
                         break;
                     default:
                     {
                         Console.Write("Enter the damage from air support: ");
-                        int damageAirSupport = _program.CheckInt();
+                        int damageAirSupport = _menu.MenuCheckInt();
                         Console.Write("Enter numbers of air support per minute: ");
-                        int airSupportPerMinute = _program.CheckInt();
+                        int airSupportPerMinute = _menu.MenuCheckInt();
 
                         tanks[i] = new LightTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation,
                             damageAirSupport, airSupportPerMinute);

@@ -16,17 +16,18 @@ namespace WOT
         {
             Console.WriteLine("\nSelect an action:\n1 - Fill tanks set\n2 - Show tanks set\n" +
                               "3 - Add standard equipment\n4 - Remove standard equipment\n5 - Add features\n" +
-                              "6 - Battle\n7 - Unfair battle\n8 - Comparer tanks hitpoints\n9 - Clear console\nOther number - Turn off");
+                              "6 - Battle\n7 - Unfair battle\n8 - Comparer tanks hit points\n9 - Clear console\n" +
+                              "Other number - Turn off");
         }
 
         public void MenuAddFeatures(Tanks tanks, int[] array, int index)
         {
             Console.WriteLine("\nEnter hitPoints:");
-            array[0] = _program.CheckInt();
+            array[0] = MenuCheckInt();
             Console.WriteLine("Enter shots per minute:");
-            array[1] = _program.CheckInt();
+            array[1] = MenuCheckInt();
             Console.WriteLine("Enter damage per shot:");
-            array[2] = _program.CheckInt();
+            array[2] = MenuCheckInt();
             
             switch (index)
             {
@@ -81,6 +82,16 @@ namespace WOT
                     Console.WriteLine("Deletion error");
                     break;
             }
+        }
+
+        public int MenuCheckInt()
+        {
+            int num;
+            while (!int.TryParse(Console.ReadLine(), out num))
+            {
+                Console.Write("Invalid data, please try again: ");
+            }
+            return num;
         }
     }
 }
