@@ -54,7 +54,6 @@ namespace WOT
         public double AirSupport()
         {
             double value = DamageAirSupport * AirSupportPerMinute;
-
             return value;
         }
     }

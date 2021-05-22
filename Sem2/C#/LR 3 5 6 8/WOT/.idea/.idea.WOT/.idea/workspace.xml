@@ -7,8 +7,11 @@
     <list default="true" id="ef4a36b1-a3d2-46ee-9fea-9422d1f34087" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WOT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/WOT/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WOT/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../C/LR7/.vs/LR7/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR7/.vs/LR7/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../C/LR7/.vs/LR7/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/LR7/.vs/LR7/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Battle/MaintainingBattle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Battle/MaintainingBattle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/HpComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/HpComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/TypesOfTanks/LightTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/TypesOfTanks/LightTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WOT/obj/Debug/net5.0/WOT.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +34,6 @@
       <option value="$PROJECT_DIR$/WOT/Nationality.cs" />
       <option value="$PROJECT_DIR$/WOT/OutputMethods.cs" />
       <option value="$PROJECT_DIR$/WOT/ICrewTraining.cs" />
-      <option value="$PROJECT_DIR$/WOT/Menu.cs" />
       <option value="$PROJECT_DIR$/WOT/ICrew.cs" />
       <option value="$PROJECT_DIR$/WOT/IBattleMethods.cs" />
       <option value="$PROJECT_DIR$/WOT/IAbilities.cs" />
@@ -44,7 +46,11 @@
       <option value="$PROJECT_DIR$/WOT/Tank.cs" />
       <option value="$PROJECT_DIR$/WOT/Program.cs" />
       <option value="$PROJECT_DIR$/WOT/Tanks.cs" />
+      <option value="$PROJECT_DIR$/WOT/Battle/MaintainingBattle.cs" />
+      <option value="$PROJECT_DIR$/WOT/TypesOfTanks/LightTank.cs" />
+      <option value="$PROJECT_DIR$/WOT/TypesOfTanks/MediumTank.cs" />
       <option value="$PROJECT_DIR$/WOT/HpComparer.cs" />
+      <option value="$PROJECT_DIR$/WOT/Menu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r7yJDyi14P1ocCehbYsTZtoyEK" />
@@ -110,6 +116,7 @@
       <workItem from="1620412905999" duration="3372000" />
       <workItem from="1620672589434" duration="127000" />
       <workItem from="1620675695160" duration="233000" />
+      <workItem from="1621720679410" duration="248000" />
     </task>
     <servers />
   </component>

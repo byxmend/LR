@@ -6,11 +6,11 @@ namespace WOT
     {
         public int Compare(Tank firstTank, Tank secondTank)
         {
-            if (firstTank.HitPoints > secondTank.HitPoints)
+            if (secondTank != null && firstTank != null && firstTank.HitPoints > secondTank.HitPoints)
             {
                 return 1;
             }
-            else if (firstTank.HitPoints == secondTank.HitPoints)
+            else if (secondTank != null && firstTank != null && firstTank.HitPoints == secondTank.HitPoints)
             {
                 return 0;
             }

@@ -36,17 +36,17 @@ namespace WOT
             }
         }
 
-        public void NumberOfShotsToKillTank(Tanks tanks, ref int TankHp, ref int TankShots,
+        public void NumberOfShotsToKillTank(Tanks tanks, ref int tankHp, ref int tankShots,
             ref int firstChooseTank, ref int secondChooseTank)
         {
-            while (TankHp > 0)
+            while (tankHp > 0)
             {
-                TankHp -= tanks[firstChooseTank].DamagePerShoot;
-                TankShots++;
+                tankHp -= tanks[firstChooseTank].DamagePerShoot;
+                tankShots++;
 
                 if (secondChooseTank == 1)
                 {
-                    TankShots += _heavyTank.Defence();
+                    tankShots += _heavyTank.Defence();
                 }
             }
         }

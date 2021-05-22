@@ -10,7 +10,7 @@ namespace WOT
         {
             Menu menu = new Menu();
             Tanks tanks = new Tanks();
-
+            
             IBattle battle = new Battle();
             IBattle unfairBattle = new UnfairBattle();
 
