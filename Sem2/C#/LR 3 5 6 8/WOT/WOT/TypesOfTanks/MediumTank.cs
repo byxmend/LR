@@ -21,8 +21,6 @@ namespace WOT
         }
         
         public MediumTank() { }
-        
-        private readonly Menu _menu = new Menu();
 
         public override void AddEquip(Tanks tanks, int index)
         {
@@ -50,9 +48,9 @@ namespace WOT
             }
         }
         
-        public int Aiming()
+        public int Aiming(Program.CheckNumberInteger checkNumberInteger)
         {
-            int value;
+            int value, num = 0;
             
             while (true)
             {
@@ -66,7 +64,7 @@ namespace WOT
                         return value;
                     default:
                         Console.WriteLine("Range: 1 - 10, try again");
-                        Disguise = _menu.MenuCheckInt();
+                        Disguise = checkNumberInteger(num);
                         break;
                 }
             }

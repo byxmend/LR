@@ -10,6 +10,8 @@ namespace WOT
 
         private readonly MediumTank _mediumTank = new MediumTank();
 
+        private readonly Program.CheckNumberInteger checkNumberInteger;
+
         public void BattleAirSupportLightTank(ref int firstChooseTank, ref int secondChooseTank,
             ref int firstTankHp, ref int secondTankHp)
         {
@@ -28,11 +30,11 @@ namespace WOT
         {
             if (secondChooseTank == 3)
             {
-                firstTankShots += _mediumTank.Aiming();
+                firstTankShots += _mediumTank.Aiming(checkNumberInteger);
             }
             else if (firstChooseTank == 3)
             {
-                secondTankShots += _mediumTank.Aiming();
+                secondTankShots += _mediumTank.Aiming(checkNumberInteger);
             }
         }
 

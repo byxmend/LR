@@ -6,8 +6,6 @@ namespace WOT
     {
         private readonly Tank[] _tanksSet;
 
-        private readonly Menu _menu = new Menu();
-
         public Tanks()
         {
             _tanksSet = new Tank[3];
@@ -19,7 +17,7 @@ namespace WOT
             private set => _tanksSet[index] = value;
         }
 
-        public int ChooseTank()
+        public int ChooseTank(Program.CheckNumberInteger checkNumberInteger)
         {
             Console.WriteLine("\nChoose number of the tank:");
 
@@ -30,8 +28,10 @@ namespace WOT
 
             Console.WriteLine(": ");
 
-            int num = _menu.MenuCheckInt();
-            return num;
+            int num = 0;
+            int returnValue = checkNumberInteger(num);
+
+            return returnValue;
         }
 
         public void ShowComparerTanksHp(Tanks tanks)
@@ -44,10 +44,11 @@ namespace WOT
                 Console.WriteLine(tanks[i].HitPoints);
         }
 
-        public void FillTanksSet(Tanks tanks)
+        public void FillTanksSet(Tanks tanks, Program.CheckNumberInteger checkNumberInteger)
         {
             for (int i = 0; i < 3; i++)
             {
+                int num = 0;
                 int hitPoints;
                 int shotsPerMinute;
                 string name;
@@ -69,15 +70,15 @@ namespace WOT
                 }
 
                 Console.Write("\nEnter the hit points: ");
-                hitPoints = _menu.MenuCheckInt();
+                hitPoints = checkNumberInteger(num);
                 Console.Write("Enter the number of shots fired per minute: ");
-                shotsPerMinute = _menu.MenuCheckInt();
+                shotsPerMinute = checkNumberInteger(num);
                 Console.Write("Enter the name: ");
                 name = Console.ReadLine();
                 Console.Write("Enter the damage per shoot: ");
-                damagePerShoot = _menu.MenuCheckInt();
+                damagePerShoot = checkNumberInteger(num);
                 Console.WriteLine("Chose nation:\n1 - Germany\n2 - Russia\n3 - France\nOther - Multinational");
-                nationInt = _menu.MenuCheckInt();
+                nationInt = checkNumberInteger(num);
 
                 switch (nationInt)
                 {
@@ -100,21 +101,21 @@ namespace WOT
                     case 0:
                     {
                         Console.Write("Enter the armor ratio: ");
-                        int armorRatio = _menu.MenuCheckInt();
+                        int armorRatio = checkNumberInteger(num);
                         tanks[i] = new HeavyTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, armorRatio);
                         break;
                     }
                     case 1:
                         Console.Write("Enter disguise: ");
-                        int disguise = _menu.MenuCheckInt();
+                        int disguise = checkNumberInteger(num);
                         tanks[i] = new MediumTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation, disguise);
                         break;
                     default:
                     {
                         Console.Write("Enter the damage from air support: ");
-                        int damageAirSupport = _menu.MenuCheckInt();
+                        int damageAirSupport = checkNumberInteger(num);
                         Console.Write("Enter numbers of air support per minute: ");
-                        int airSupportPerMinute = _menu.MenuCheckInt();
+                        int airSupportPerMinute = checkNumberInteger(num);
 
                         tanks[i] = new LightTank(hitPoints, shotsPerMinute, name, damagePerShoot, nation,
                             damageAirSupport, airSupportPerMinute);

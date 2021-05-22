@@ -4,8 +4,6 @@ namespace WOT
 {
     public class Menu
     {
-        private readonly Program _program = new Program();
-
         private readonly HeavyTank _heavyTank = new HeavyTank();
 
         private readonly MediumTank _mediumTank = new MediumTank();
@@ -20,15 +18,16 @@ namespace WOT
                               "Other number - Turn off");
         }
 
-        public void MenuAddFeatures(Tanks tanks, int[] array, int index)
+        public void MenuAddFeatures(Tanks tanks, int[] array, int index, Program.CheckNumberInteger checkNumberInteger)
         {
+            int num = 0;
             Console.WriteLine("\nEnter hitPoints:");
-            array[0] = MenuCheckInt();
+            array[0] = checkNumberInteger(num);
             Console.WriteLine("Enter shots per minute:");
-            array[1] = MenuCheckInt();
+            array[1] = checkNumberInteger(num);
             Console.WriteLine("Enter damage per shot:");
-            array[2] = MenuCheckInt();
-            
+            array[2] = checkNumberInteger(num);
+
             switch (index)
             {
                 case 0:
@@ -84,9 +83,8 @@ namespace WOT
             }
         }
 
-        public int MenuCheckInt()
+        public int MenuCheckInteger(int num)
         {
-            int num;
             while (!int.TryParse(Console.ReadLine(), out num))
             {
                 Console.Write("Invalid data, please try again: ");
