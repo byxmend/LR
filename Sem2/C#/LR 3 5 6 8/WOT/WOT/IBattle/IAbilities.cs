@@ -6,6 +6,6 @@
             ref int firstTankHp,  ref int secondTankHp);
 
         void BattleAimingMediumTank(ref int firstChooseTank, ref int secondChooseTank,
-            ref int firstTankShots, ref int secondTankShots);
+            ref int firstTankShots, ref int secondTankShots, Program.CheckNumberInteger checkNumberInteger);
     }
 }
