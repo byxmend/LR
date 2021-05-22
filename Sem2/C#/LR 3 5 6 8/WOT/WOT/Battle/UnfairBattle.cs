@@ -6,7 +6,7 @@ namespace WOT
     {
         private readonly ICalculatePoints _calculatePoints = new MaintainingBattle();
 
-        public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank)
+        public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank, Program.CheckNumberInteger checkNumberInteger)
         {
             int firstTankHp = tanks[firstChooseTank].HitPoints;
             int secondTankHp = tanks[secondChooseTank].HitPoints;

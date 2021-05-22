@@ -50,12 +50,12 @@ namespace WOT
                     case 6:
                         firstChooseTank = tanks.ChooseTank(checkNumberInteger);
                         secondChooseTank = tanks.ChooseTank(checkNumberInteger);
-                        battle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
+                        battle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank, checkNumberInteger);
                         break;
                     case 7:
                         firstChooseTank = tanks.ChooseTank(checkNumberInteger);
                         secondChooseTank = tanks.ChooseTank(checkNumberInteger);
-                        unfairBattle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank);
+                        unfairBattle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank, checkNumberInteger);
                         break;
                     case 8:
                         tanks.ShowComparerTanksHp(tanks);
