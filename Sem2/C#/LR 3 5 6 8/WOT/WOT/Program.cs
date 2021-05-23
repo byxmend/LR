@@ -6,6 +6,10 @@ namespace WOT
     {
         public delegate int CheckNumberInteger(int num);
 
+        public delegate void ShowInfoAboutTanksInBattle(Tanks tanks, int index);
+
+        public static event ShowInfoAboutTanksInBattle EventShowInfoAbotTanksInBattle = null;
+
         static void Main(string[] args)
         {
             Menu menu = new Menu();
@@ -14,7 +18,9 @@ namespace WOT
             IBattle battle = new Battle();
             IBattle unfairBattle = new UnfairBattle();
 
-            CheckNumberInteger checkNumberInteger = menu.MenuCheckInteger;
+            CheckNumberInteger checkNumberInteger = new CheckNumberInteger(menu.MenuCheckInteger);
+
+            EventShowInfoAbotTanksInBattle += menu.ShowMessage;
 
             int[] array = new int[3];
             int firstChooseTank, secondChooseTank;
@@ -50,11 +56,15 @@ namespace WOT
                     case 6:
                         firstChooseTank = tanks.ChooseTank(checkNumberInteger);
                         secondChooseTank = tanks.ChooseTank(checkNumberInteger);
+                        EventShowInfoAbotTanksInBattle(tanks, firstChooseTank);
+                        EventShowInfoAbotTanksInBattle(tanks, secondChooseTank);
                         battle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank, checkNumberInteger);
                         break;
                     case 7:
                         firstChooseTank = tanks.ChooseTank(checkNumberInteger);
                         secondChooseTank = tanks.ChooseTank(checkNumberInteger);
+                        EventShowInfoAbotTanksInBattle(tanks, firstChooseTank);
+                        EventShowInfoAbotTanksInBattle(tanks, secondChooseTank);
                         unfairBattle.BattleBetweenTanks(tanks, firstChooseTank, secondChooseTank, checkNumberInteger);
                         break;
                     case 8:

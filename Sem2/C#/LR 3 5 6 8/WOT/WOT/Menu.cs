@@ -91,5 +91,10 @@ namespace WOT
             }
             return num;
         }
+
+        public void ShowMessage(Tanks tanks, int index)
+        {
+            Console.WriteLine(Tanks.ShowInfoAboutTanks(tanks, index));
+        }
     }
 }
