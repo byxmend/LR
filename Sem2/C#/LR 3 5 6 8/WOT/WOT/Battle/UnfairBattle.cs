@@ -8,31 +8,38 @@ namespace WOT
 
         public void BattleBetweenTanks(Tanks tanks, int firstChooseTank, int secondChooseTank, Program.CheckNumberInteger checkNumberInteger)
         {
-            int firstTankHp = tanks[firstChooseTank].HitPoints;
-            int secondTankHp = tanks[secondChooseTank].HitPoints;
-            int firstTankShots = 0;
-            int secondTankShots = 0;
-            double shotRatio1 = 0;
-            double shotRatio2 = 0;
-
-            if (tanks[firstChooseTank] != tanks[secondChooseTank])
+            try
             {
-                Console.WriteLine("\nUnfair battle!\n");
+                int firstTankHp = tanks[firstChooseTank].HitPoints;
+                int secondTankHp = tanks[secondChooseTank].HitPoints;
+                int firstTankShots = 0;
+                int secondTankShots = 0;
+                double shotRatio1 = 0;
+                double shotRatio2 = 0;
 
-                // first tank
-                _calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
+                if (tanks[firstChooseTank] != tanks[secondChooseTank])
+                {
+                    Console.WriteLine("\nUnfair battle!\n");
 
-                // second tank
-                _calculatePoints.NumberOfShotsToKillTank(tanks, ref secondTankHp, ref secondTankShots, ref firstChooseTank, ref secondChooseTank);
+                    // first tank
+                    _calculatePoints.NumberOfShotsToKillTank(tanks, ref firstTankHp, ref firstTankShots, ref firstChooseTank, ref secondChooseTank);
 
-                _calculatePoints.CalculateShotsRatio(tanks, ref secondTankShots, ref secondChooseTank, ref shotRatio1, ref shotRatio2, ref firstTankShots,
-                    ref firstChooseTank);
+                    // second tank
+                    _calculatePoints.NumberOfShotsToKillTank(tanks, ref secondTankHp, ref secondTankShots, ref firstChooseTank, ref secondChooseTank);
 
-                _calculatePoints.DeterminingTheWinner(ref shotRatio1, ref shotRatio2);
+                    _calculatePoints.CalculateShotsRatio(tanks, ref secondTankShots, ref secondChooseTank, ref shotRatio1, ref shotRatio2, ref firstTankShots,
+                        ref firstChooseTank);
+
+                    _calculatePoints.DeterminingTheWinner(ref shotRatio1, ref shotRatio2);
+                }
+                else
+                {
+                    Console.WriteLine("A tank can't fight itself");
+                }
             }
-            else
+            catch
             {
-                Console.WriteLine("A tank can't fight itself");
+                Console.WriteLine("Error battle!");
             }
         }
     }

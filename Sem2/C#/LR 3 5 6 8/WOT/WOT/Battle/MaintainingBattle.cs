@@ -62,8 +62,7 @@ namespace WOT
             }
             else
             {
-                Console.WriteLine(
-                    "The hit points of the second tank is less than zero or the second tank does not fire");
+                Console.WriteLine("The hit points of the second tank is less than zero or the second tank does not fire");
             }
         }
 

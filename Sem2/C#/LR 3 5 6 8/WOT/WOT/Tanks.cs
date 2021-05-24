@@ -156,11 +156,21 @@ namespace WOT
 
         public static string ShowInfoAboutTanks(Tanks tanks, int index)
         {
-            string message = ($"\nTank {index}:\n\nHitPoints: {tanks[index].HitPoints}" +
-                $"\nShotsPerMinute: {tanks[index].ShotsPerMinute}\nName: {tanks[index].Name}" +
-                $"\nDamagePerShoot: {tanks[index].DamagePerShoot}");
-            
-            return message;
+            if (index >= 0 && index < 3)
+            {
+                string message = ($"\nTank {index}:\n\nHitPoints: {tanks[index].HitPoints}" +
+            $"\nShotsPerMinute: {tanks[index].ShotsPerMinute}\nName: {tanks[index].Name}" +
+            $"\nDamagePerShoot: {tanks[index].DamagePerShoot}");
+
+                return message;
+            }
+            else
+            {
+                string errorMessage = "Error: out of array range";
+
+                return errorMessage;
+            }
+
         }
     }
 }
