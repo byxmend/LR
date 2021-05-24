@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let inputValue = e.target.value.replace(/\D/g, '')
 
     // e.keyCode = 8 = backspace
-    if (e.keyCode == 8 && inputValue.length == 1) {
+    if (e.keyCode == 8 && (inputValue.length == 1 || inputValue.length == 3)) {
       e.target.value = ''
     }
   }
