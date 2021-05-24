@@ -8,7 +8,7 @@ namespace WOT
 
         public delegate void ShowInfoAboutTanksInBattle(Tanks tanks, int index);
 
-        public static event ShowInfoAboutTanksInBattle EventShowInfoAbotTanksInBattle = null;
+        public static event ShowInfoAboutTanksInBattle EventShowInfoAbotTanksInBattle;
 
         static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace WOT
             IBattle battle = new Battle();
             IBattle unfairBattle = new UnfairBattle();
 
-            CheckNumberInteger checkNumberInteger = new CheckNumberInteger(menu.MenuCheckInteger);
+            CheckNumberInteger checkNumberInteger = menu.MenuCheckInteger;
 
             EventShowInfoAbotTanksInBattle += menu.ShowMessage;
 

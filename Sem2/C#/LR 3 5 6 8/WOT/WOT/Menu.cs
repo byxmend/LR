@@ -47,39 +47,25 @@ namespace WOT
         
         public void MenuAddEquip(Tanks tanks, int index)
         {
-            switch (index)
+            try
             {
-                case 0:
-                    tanks[index].AddEquip(tanks, index);
-                    break;
-                case 1:
-                    tanks[index].AddEquip(tanks, index);
-                    break;
-                case 2:
-                    tanks[index].AddEquip(tanks, index);
-                    break;
-                default:
-                    Console.WriteLine("Adding error");
-                    break;
+                tanks[index].AddEquip(tanks, index);
+            }
+            catch
+            {
+                Console.WriteLine("Out of range!");
             }
         }
         
         public void MenuDeleteEquip(Tanks tanks, int index)
         {
-            switch (index)
+            try
             {
-                case 0:
-                    tanks[index].DeleteEquip(tanks, index);
-                    break;
-                case 1:
-                    tanks[index].DeleteEquip(tanks, index);
-                    break;
-                case 2:
-                    tanks[index].DeleteEquip(tanks, index);
-                    break;
-                default:
-                    Console.WriteLine("Deletion error");
-                    break;
+                tanks[index].DeleteEquip(tanks, index);
+            }
+            catch
+            {
+                Console.WriteLine("Out of range!");
             }
         }
 
