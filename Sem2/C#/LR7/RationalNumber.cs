@@ -218,7 +218,7 @@ namespace LR7
                         return new RationalNumber
                         {
                             Denominator = Convert.ToInt32(firstBuffer.ToString()),
-                            Numerator = Convert.ToInt32(secondBuffer.ToString()),
+                            Numerator = Convert.ToInt32(secondBuffer.ToString())
                         };
                     }
                     else
@@ -240,7 +240,7 @@ namespace LR7
                         {
                             Denominator = Convert.ToInt32(Math.Pow(10, str.Length - i - 1)),
                             Numerator = Convert.ToInt32(Convert.ToDouble(str) * 
-                            Convert.ToDouble(Math.Pow(10, str.Length - i - 1))),
+                            Convert.ToDouble(Math.Pow(10, str.Length - i - 1)))
                         };
                     }
                     else
