@@ -7,86 +7,108 @@ namespace LR7
     {
         static void Main(string[] args)
         {
-            RationalNumber a = new RationalNumber(15, 30);
-            RationalNumber b = new RationalNumber(10, 8);
-            RationalNumber c = new RationalNumber(8, 4);
-            RationalNumber d = new RationalNumber(34, 17);
-            RationalNumber[] rationalNumbers = new RationalNumber[] { a, b, c, d };
+            RationalNumber firstNumber = new RationalNumber(30, 60);
+            RationalNumber secondNumber = new RationalNumber(20, 16);
+            RationalNumber thirdNumber = new RationalNumber(16, 8);
+            RationalNumber fourthNumber = new RationalNumber(68, 34);
+            RationalNumber firstRationalNumber = new RationalNumber();
+            RationalNumber secondRationalBumber = new RationalNumber();
 
-            foreach (RationalNumber i in rationalNumbers)
+            RationalNumber[] rationalNumbers = new RationalNumber[] 
+            { 
+                firstNumber,
+                secondNumber,
+                thirdNumber,
+                fourthNumber
+            };
+
+
+            foreach (RationalNumber index in rationalNumbers)
             {
-                RationalNumber.reduceFraction(i);
+                RationalNumber.reduceFraction(index);
             }
 
             Array.Sort(rationalNumbers);
-            foreach (RationalNumber i in rationalNumbers)
+
+            foreach (RationalNumber index in rationalNumbers)
             {
-                RationalNumber.getType(i, "in decimal");
+                RationalNumber.getType(index, "in decimal");
             }
 
+            Console.WriteLine($"\n{firstNumber > secondNumber}\n" +
+                $"{fourthNumber < thirdNumber}\n" +
+                $"{fourthNumber == thirdNumber}\n" +
+                $"{secondNumber.Equals(fourthNumber)}\n" +
+                $"{fourthNumber.Equals(thirdNumber)}\n");
+
+            firstRationalNumber = firstNumber + secondNumber;
+
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstRationalNumber, "with fractions");
             Console.WriteLine();
 
-            Console.WriteLine(a > b);
-            Console.WriteLine(d < c);
-            Console.WriteLine(d == c);
-            Console.WriteLine(b.Equals(d));
-            Console.WriteLine(d.Equals(c));
+            firstRationalNumber = firstNumber - secondNumber;
+
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstRationalNumber, "with fractions");
+            Console.WriteLine();
+            
+            firstRationalNumber = firstNumber * secondNumber;
+            
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstRationalNumber, "with fractions");
+            Console.WriteLine();
+            
+            firstRationalNumber = firstNumber / secondNumber;
+            
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstRationalNumber, "with fractions");
+            Console.WriteLine();
+            
+            firstNumber++;
+            
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstNumber, "with fractions");
+            Console.WriteLine();
+            
+            firstNumber--;
+            
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstNumber, "with fractions");
+            Console.WriteLine();
+            
+            firstRationalNumber = firstNumber + 10;
+            
+            RationalNumber.reduceFraction(firstRationalNumber);
+            RationalNumber.getType(firstRationalNumber, "with fractions");
             Console.WriteLine();
 
-            RationalNumber rationalNumber = new RationalNumber();
-            rationalNumber = a + b;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(rationalNumber, "with fractions");
-            Console.WriteLine();
-            rationalNumber = a - b;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(rationalNumber, "with fractions");
-            Console.WriteLine();
-            rationalNumber = a * b;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(rationalNumber, "with fractions");
-            Console.WriteLine();
-            rationalNumber = a / b;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(rationalNumber, "with fractions");
-            Console.WriteLine();
-            a++;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(a, "with fractions");
-            Console.WriteLine();
-            a--;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(a, "with fractions");
-            Console.WriteLine();
-            rationalNumber = a + 10;
-            RationalNumber.reduceFraction(rationalNumber);
-            RationalNumber.getType(rationalNumber, "with fractions");
-            Console.WriteLine();
-
-            int buf1;
-            double buf2;
-            buf1 = a;
-            Console.WriteLine(buf1);
-            buf2 = (double)a;
-            Console.WriteLine(buf2 + "\n");
-
-            Console.WriteLine(a.ToString("in decimal"));
-            Console.WriteLine(a.ToString("with fractions"));
-            Console.WriteLine();
-
-            RationalNumber num = new RationalNumber();
+            int firstBuffer;
+            double secondBuffer;
             string str = "99/17";
-            num = (RationalNumber)str;
-            RationalNumber.getType(num, "with fractions");
+
+            firstBuffer = firstNumber;
+            Console.WriteLine(firstBuffer);
+
+            secondBuffer = (double)firstNumber;
+            Console.WriteLine(secondBuffer + "\n");
+
+            Console.WriteLine(firstNumber.ToString("in decimal"));
+            Console.WriteLine(firstNumber.ToString("with fractions"));
+            Console.WriteLine();
+
+            secondRationalBumber = (RationalNumber)str;
+            RationalNumber.getType(secondRationalBumber, "with fractions");
             Console.WriteLine();
 
             string inputStr = Console.ReadLine();
-            string[] rationalNumbers1 = inputStr.Split(' ');
+            string[] ratNum = inputStr.Split(' ');
             List<RationalNumber> listNumbers = new List<RationalNumber>();
-            RationalNumber.processString(rationalNumbers1, listNumbers);
-            foreach (RationalNumber i in listNumbers)
+            RationalNumber.processString(ratNum, listNumbers);
+
+            foreach (RationalNumber index in listNumbers)
             {
-                Console.WriteLine(i.ToString("in decimal"));
+                Console.WriteLine(index.ToString("in decimal"));
             }
         }
     }
