@@ -5,8 +5,11 @@ namespace WOT
     public class HeavyTank : Tank
     {
         public sealed override int ArmorRatio { get; set; }
+
         public override int Disguise { get; set; }
+
         public override int DamageAirSupport { get; set; }
+
         public override double AirSupportPerMinute { get; set; }
         
         public HeavyTank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, Nationality nation, 

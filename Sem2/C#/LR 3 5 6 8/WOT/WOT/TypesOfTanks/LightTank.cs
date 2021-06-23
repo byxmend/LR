@@ -5,8 +5,11 @@ namespace WOT
     public class LightTank : Tank
     {
         public sealed override int DamageAirSupport { get; set; }
+
         public sealed override double AirSupportPerMinute { get; set; }
+
         public override int Disguise { get; set; }
+
         public override int ArmorRatio { get; set; }
         
         public LightTank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, Nationality nation, 

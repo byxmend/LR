@@ -3,14 +3,23 @@
     public abstract class Tank
     {
         public int HitPoints { get; set; }
+
         public int ShotsPerMinute { get; set; }
+        
         public int DamagePerShoot { get; set; }
+        
         public string Name { get; protected init; }
+        
         public bool Equipment { get; set; }
+        
         public Nationality Nation { get; protected init; }
+        
         public abstract int ArmorRatio { get; set; }
+        
         public abstract int DamageAirSupport { get; set; }
+        
         public abstract int Disguise { get; set; }
+        
         public abstract double AirSupportPerMinute { get; set; }
 
         protected Tank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, Nationality nation)

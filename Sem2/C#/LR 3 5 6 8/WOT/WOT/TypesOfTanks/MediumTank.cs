@@ -5,8 +5,11 @@ namespace WOT
     public class MediumTank : Tank
     {
         public sealed override int Disguise { get; set; }
+
         public override int ArmorRatio { get; set; }
+
         public override int DamageAirSupport { get; set; }
+
         public override double AirSupportPerMinute { get; set; }
 
         public MediumTank(int hitPoints, int shotsPerMinute, string name, int damagePerShoot, 
@@ -54,18 +57,20 @@ namespace WOT
             
             while (true)
             {
-                switch (Disguise)
+                if (Disguise > 0 && Disguise < 6)
                 {
-                    case > 0 and < 6:
-                        value = Disguise / 2;
-                        return value;
-                    case > 5 and < 11:
-                        value = Disguise / 3;
-                        return value;
-                    default:
-                        Console.WriteLine("Range: 1 - 10, try again");
-                        Disguise = checkNumberInteger(num);
-                        break;
+                    value = Disguise / 2;
+                    return value;
+                }
+                else if (Disguise > 5 && Disguise < 11)
+                {
+                    value = Disguise / 3;
+                    return value;
+                }
+                else
+                {
+                    Console.WriteLine("Range: 1 - 10, try again");
+                    Disguise = checkNumberInteger(num);
                 }
             }
         }
